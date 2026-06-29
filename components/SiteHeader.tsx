@@ -7,7 +7,7 @@ import { useCart } from '@/lib/cart-context';
 import { useWishlist } from '@/lib/wishlist-context';
 
 const INDOOR_LINKS = [
-  { label: 'Large statement plants', href: '/shop?category=Large' },
+  { label: 'Large statement plants', href: '/shop?subcategory=Large' },
   { label: 'Rare & collectible', href: '/shop?subcategory=Rare' },
   { label: 'Hanging & trailing', href: '/shop?tag=hanging' },
   { label: 'Low-light friendly', href: '/shop?tag=low-light' },
