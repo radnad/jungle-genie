@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Wonderia';
+  src: url('/fonts/Wonderia.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --olive: #84994F;
+  --butter: #FFE797;
+  --marigold: #FCB53B;
+  --marigold-deep: #E09A24;
+  --rose-clay: #B45253;
+  --cream: #FBF7EA;
+  --canvas-alt: #F2ECD9;
+  --olive-deep: #33401C;
+  --ink: #2C3019;
+  --muted: #5A6147;
+  --line: #E7DFC8;
+  --shadow: 0 6px 20px rgba(51,64,28,.10);
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes jg-sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.75) rotate(-10deg); }
+  50%       { opacity: 1;   transform: scale(1.15) rotate(12deg); }
+}
+
+.animate-sparkle       { animation: jg-sparkle 2.6s ease-in-out infinite; }
+.animate-sparkle-slow  { animation: jg-sparkle 3.1s ease-in-out infinite; }
+.animate-sparkle-fast  { animation: jg-sparkle 2.2s ease-in-out infinite 0.5s; }
+
+input[type='range'] {
+  accent-color: #84994F;
+}
+
+.font-lining {
+  font-variant-numeric: lining-nums;
+}

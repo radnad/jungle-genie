@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Wonderia';src:url('assets/fonts/Wonderia.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+:root{--olive:#84994F;--butter:#FFE797;--marigold:#FCB53B;--rose-clay:#B45253;--cream:#FBF7EA;--canvas-alt:#F2ECD9;--olive-deep:#33401C;--ink:#2C3019;--muted:#5A6147;--line:#E7DFC8;--marigold-deep:#E09A24;--r-sm:10px;--r-md:16px;--r-lg:24px;--r-pill:999px;--shadow:0 6px 20px rgba(51,64,28,.10);}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--cream);}
+@keyframes jg-sparkle{0%,100%{opacity:.4;transform:scale(.75) rotate(-10deg);}50%{opacity:1;transform:scale(1.15) rotate(12deg);}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Fraunces',serif;color:var(--ink);background:var(--cream);min-height:100vh;-webkit-font-smoothing:antialiased;">
+
+  <dc-import name="Nav" cart-count="{{ cart }}" hint-size="100%,72px"></dc-import>
+
+  <!-- breadcrumb -->
+  <div style="max-width:1280px;margin:0 auto;padding:22px 5vw 0;font-size:13px;color:var(--muted);">
+    <a href="Home.dc.html" style="color:var(--muted);text-decoration:none;">Home</a> ·
+    <a href="Shop.dc.html" style="color:var(--muted);text-decoration:none;">Indoor</a> ·
+    <a href="Shop.dc.html" style="color:var(--muted);text-decoration:none;">Monstera</a> ·
+    <span style="color:var(--ink);">Monstera Albo</span>
+  </div>
+
+  <!-- main -->
+  <section style="max-width:1280px;margin:0 auto;padding:24px 5vw 16px;display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start;">
+    <!-- gallery -->
+    <div style="flex:1 1 380px;min-width:300px;">
+      <image-slot id="prod-hero" shape="rounded" radius="24" placeholder="Drop main plant photo" style="width:100%;height:clamp(340px,40vw,520px);display:block;box-shadow:var(--shadow);"></image-slot>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;">
+        <image-slot id="prod-t1" shape="rounded" radius="12" placeholder="" style="width:100%;height:84px;display:block;background:var(--canvas-alt);"></image-slot>
+        <image-slot id="prod-t2" shape="rounded" radius="12" placeholder="" style="width:100%;height:84px;display:block;background:var(--canvas-alt);"></image-slot>
+        <image-slot id="prod-t3" shape="rounded" radius="12" placeholder="" style="width:100%;height:84px;display:block;background:var(--canvas-alt);"></image-slot>
+        <image-slot id="prod-t4" shape="rounded" radius="12" placeholder="" style="width:100%;height:84px;display:block;background:var(--canvas-alt);"></image-slot>
+      </div>
+    </div>
+
+    <!-- info -->
+    <div style="flex:1 1 360px;min-width:300px;">
+      <span style="display:inline-block;font-family:'Fraunces';font-weight:600;font-size:12px;letter-spacing:.04em;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:6px 13px;border-radius:var(--r-pill);">Monstera</span>
+      <h1 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(38px,5vw,58px);line-height:1;margin:14px 0 12px;color:var(--olive-deep);">Monstera Albo</h1>
+      <p style="font-size:17px;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:46ch;">The collector's crown jewel — creamy variegated splits on every leaf. A little theatrical, endlessly rewarding.</p>
+      <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:22px;">
+        <span style="font-family:'Fraunces';font-weight:600;font-size:32px;color:var(--ink);font-variant-numeric:lining-nums;">3,500 EGP</span>
+        <span style="font-size:14px;color:var(--olive);background:rgba(132,153,79,.12);padding:5px 12px;border-radius:var(--r-pill);">In stock · ships in 2–3 days</span>
+      </div>
+
+      <!-- care badges -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px;min-width:90px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="#E09A24" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="#E09A24" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span style="font-size:12px;color:var(--muted);">Light</span><span style="font-size:13px;font-weight:600;">Bright indirect</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px;min-width:90px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3C12 3 5 11 5 15a7 7 0 0014 0c0-4-7-12-7-12Z" stroke="#84994F" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span style="font-size:12px;color:var(--muted);">Water</span><span style="font-size:13px;font-weight:600;">Weekly</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px;min-width:90px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 11c0-3 2-5 4-5 1 0 2 .6 3 2 1-1.4 2-2 3-2 2 0 4 2 4 5 0 4-7 9-7 9s-7-5-7-9Z" stroke="#B45253" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span style="font-size:12px;color:var(--muted);">Pets</span><span style="font-size:13px;font-weight:600;">Keep out of reach</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px;min-width:90px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21V8M12 8c0-3-2-5-5-5M12 8c0-2 1.5-4 4-4" stroke="#84994F" stroke-width="1.6" stroke-linecap="round"/><rect x="8" y="18" width="8" height="3" rx="1" stroke="#84994F" stroke-width="1.6"/></svg>
+          <span style="font-size:12px;color:var(--muted);">Size</span><span style="font-size:13px;font-weight:600;">Large · 80cm</span>
+        </div>
+      </div>
+
+      <!-- qty + add -->
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:18px;">
+        <div style="display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:var(--r-pill);overflow:hidden;background:#fff;">
+          <button onClick="{{ dec }}" style="font-family:'Fraunces';font-size:22px;border:none;background:transparent;color:var(--olive-deep);width:48px;height:50px;cursor:pointer;line-height:1;">−</button>
+          <span style="font-family:'Fraunces';font-weight:600;font-size:18px;min-width:40px;text-align:center;font-variant-numeric:lining-nums;">{{ qty }}</span>
+          <button onClick="{{ inc }}" style="font-family:'Fraunces';font-size:22px;border:none;background:transparent;color:var(--olive-deep);width:48px;height:50px;cursor:pointer;line-height:1;">+</button>
+        </div>
+        <button onClick="{{ add }}" style="flex:1;min-width:200px;font-family:'Fraunces';font-weight:600;font-size:16px;border:none;background:var(--olive);color:var(--cream);padding:15px 24px;border-radius:var(--r-pill);cursor:pointer;box-shadow:var(--shadow);transition:.16s;" style-hover="background:var(--marigold);color:var(--olive-deep);">{{ addLabel }}</button>
+      </div>
+      <a href="Cart.dc.html" style="display:inline-block;font-family:'Fraunces';font-size:14px;color:var(--marigold-deep);text-decoration:none;border-bottom:1.5px solid var(--marigold);padding-bottom:2px;">View cart →</a>
+    </div>
+  </section>
+
+  <!-- WISH cross-sell -->
+  <section style="max-width:1280px;margin:0 auto;padding:36px 5vw;">
+    <div style="background:linear-gradient(150deg,#FFF6D6,#FBF7EA 70%);border:1px solid rgba(252,181,59,.45);border-radius:var(--r-lg);padding:28px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;box-shadow:0 8px 26px rgba(224,154,36,.14);">
+      <div style="flex:1 1 320px;min-width:280px;">
+        <p style="display:inline-flex;align-items:center;gap:8px;font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--marigold-deep);margin:0 0 8px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" style="animation:jg-sparkle 2.6s ease-in-out infinite;"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z" fill="#E09A24"/></svg>
+          Part of a Wish bundle?
+        </p>
+        <h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(26px,3.5vw,38px);margin:0 0 10px;color:var(--olive-deep);">Make it the Statement Corner trio</h2>
+        <p style="font-size:16px;line-height:1.55;color:var(--muted);margin:0 0 18px;max-width:48ch;">Pair your Monstera with a Rhapis Palm and a Fiddle Leaf — a whole leafy corner, granted together for <strong style="color:var(--ink);">2,400 EGP</strong>.</p>
+        <button onClick="{{ addBundle }}" style="font-family:'Fraunces';font-weight:600;font-size:15px;border:none;background:var(--olive-deep);color:var(--cream);padding:13px 26px;border-radius:var(--r-pill);cursor:pointer;transition:.16s;" style-hover="background:var(--marigold);color:var(--olive-deep);">{{ bundleLabel }}</button>
+      </div>
+      <div style="flex:0 1 300px;min-width:260px;">
+        <dc-import name="WishCard" hint-size="100%,440px" title-text="Third Wish" subtitle-text="Statement Corner" items="{{ wish }}" price="2,400" save-text="Big &amp; bold" on-add="{{ addBundle }}"></dc-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- care notes -->
+  <section style="max-width:1280px;margin:0 auto;padding:24px 5vw 16px;">
+    <h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(26px,3.5vw,38px);margin:0 0 18px;color:var(--olive-deep);">Care notes</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;"><p style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);margin:0 0 8px;">Light</p><p style="margin:0;font-size:15px;line-height:1.6;color:var(--ink);">Bright, indirect light keeps the white variegation crisp. A sheer-curtained east window is perfect; avoid harsh midday sun on pale leaves.</p></div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;"><p style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);margin:0 0 8px;">Water</p><p style="margin:0;font-size:15px;line-height:1.6;color:var(--ink);">Let the top 3–4cm of soil dry between drinks. She'd rather be a touch thirsty than soggy — roots dislike sitting wet.</p></div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;"><p style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);margin:0 0 8px;">A little extra</p><p style="margin:0;font-size:15px;line-height:1.6;color:var(--ink);">Loves humidity and a moss pole to climb. Wipe leaves monthly so every window of variegation can drink in the light.</p></div>
+    </div>
+  </section>
+
+  <!-- related -->
+  <section style="max-width:1280px;margin:0 auto;padding:40px 5vw 24px;">
+    <h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(28px,4vw,42px);margin:0 0 24px;color:var(--olive-deep);">You may also wish for</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px;">
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Philodendron Patriciae" family="Philodendron" price="2,500" image-id="rel-1" on-add="{{ addToCart }}"></dc-import>
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Monstera Adansonii Variegated" family="Monstera" price="2,500" image-id="rel-2" on-add="{{ addToCart }}"></dc-import>
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Caramel Marble Philodendron" family="Philodendron" price="3,250" image-id="rel-3" on-add="{{ addToCart }}"></dc-import>
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Strawberry Shake Philodendron" family="Philodendron" price="1,600" image-id="rel-4" on-add="{{ addToCart }}"></dc-import>
+    </div>
+  </section>
+
+  <div style="height:32px;"></div>
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cart: 0, qty: 1, added: false, bundleAdded: false };
+  renderVals() {
+    return {
+      cart: this.state.cart,
+      qty: this.state.qty,
+      inc: () => this.setState(s => ({ qty: s.qty + 1 })),
+      dec: () => this.setState(s => ({ qty: Math.max(1, s.qty - 1) })),
+      addLabel: this.state.added ? 'Wish granted ✓' : 'Add to cart',
+      add: () => { this.setState(s => ({ cart: s.cart + s.qty, added: true })); clearTimeout(this._t); this._t = setTimeout(() => this.setState({ added: false }), 1400); },
+      addToCart: () => this.setState(s => ({ cart: s.cart + 1 })),
+      bundleLabel: this.state.bundleAdded ? 'Wish granted ✓' : 'Add the trio · 2,400 EGP',
+      addBundle: () => { this.setState(s => ({ cart: s.cart + 1, bundleAdded: true })); clearTimeout(this._b); this._b = setTimeout(() => this.setState({ bundleAdded: false }), 1500); },
+      wish: [{ name: 'Monstera Deliciosa', id: 'prod-w-0' }, { name: 'Rhapis Palm', id: 'prod-w-1' }, { name: 'Fiddle Leaf', id: 'prod-w-2' }],
+    };
+  }
+}
+</script>
+</body>
+</html>

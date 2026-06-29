@@ -1,0 +1,47 @@
+[
+  {
+    "_comment": "To edit a bundle: change name, subtitle, plantIds (must match product 'id' fields), price, or saveText. To add a bundle, copy one object and add it to the list.",
+    "id": "first-wish",
+    "name": "First Wish",
+    "slug": "first-wish",
+    "wishLabel": "Beginner's Trio",
+    "plantIds": ["snake-plant-zeylanica", "marble-queen-pothos", "zz-plant"],
+    "bundlePriceEGP": 600,
+    "savePercent": 48,
+    "saveText": "Hard to kill",
+    "description": "Three friends that thrive on gentle neglect. Perfect for new plant parents or anyone who travels often."
+  },
+  {
+    "id": "second-wish",
+    "name": "Second Wish",
+    "slug": "second-wish",
+    "wishLabel": "Air Genie",
+    "plantIds": ["peace-lily", "spider-plant", "areca-palm"],
+    "bundlePriceEGP": 780,
+    "savePercent": 26,
+    "saveText": "Air-purifying",
+    "description": "A trio that works quietly in the background, cleaning your air and softening every room they're in."
+  },
+  {
+    "id": "third-wish",
+    "name": "Third Wish",
+    "slug": "third-wish",
+    "wishLabel": "Statement Corner",
+    "plantIds": ["monstera-deliciosa", "rhapis-palm", "variegated-fiddle-leaf"],
+    "bundlePriceEGP": 2400,
+    "savePercent": 34,
+    "saveText": "Big and bold",
+    "description": "Three large, statement plants that together transform an empty corner into a lush, editorial moment."
+  },
+  {
+    "id": "collectors-wish",
+    "name": "Collector's Wish",
+    "slug": "collectors-wish",
+    "wishLabel": "Rare Trio",
+    "plantIds": ["anthurium-clarinervium", "alocasia-frydek-variegated", "strawberry-shake-philodendron"],
+    "bundlePriceEGP": 3300,
+    "savePercent": 12,
+    "saveText": "Save 12%",
+    "description": "Three of the most sought-after collector plants, united. For those whose jungle must be extraordinary."
+  }
+]

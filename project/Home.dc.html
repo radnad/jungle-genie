@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Wonderia';src:url('assets/fonts/Wonderia.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+:root{--olive:#84994F;--butter:#FFE797;--marigold:#FCB53B;--rose-clay:#B45253;--cream:#FBF7EA;--canvas-alt:#F2ECD9;--olive-deep:#33401C;--ink:#2C3019;--muted:#5A6147;--line:#E7DFC8;--marigold-deep:#E09A24;--r-sm:10px;--r-md:16px;--r-lg:24px;--r-pill:999px;--shadow:0 6px 20px rgba(51,64,28,.10);}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--cream);}
+@keyframes jg-sparkle{0%,100%{opacity:.4;transform:scale(.75) rotate(-10deg);}50%{opacity:1;transform:scale(1.15) rotate(12deg);}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Fraunces',serif;color:var(--ink);background:var(--cream);min-height:100vh;-webkit-font-smoothing:antialiased;">
+
+  <dc-import name="Nav" cart-count="{{ cart }}" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <section style="max-width:1280px;margin:0 auto;padding:48px 5vw 24px;display:flex;flex-wrap:wrap;gap:40px;align-items:center;">
+    <div style="flex:1 1 360px;min-width:300px;">
+      <p style="display:inline-flex;align-items:center;gap:8px;font-family:'Fraunces';font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--marigold-deep);margin:0 0 18px;background:var(--butter);padding:7px 14px;border-radius:var(--r-pill);">
+        <svg width="13" height="13" viewBox="0 0 24 24" style="animation:jg-sparkle 2.6s ease-in-out infinite;"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z" fill="#E09A24"/></svg>
+        Nurturing Nature
+      </p>
+      <h1 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(48px,7vw,88px);line-height:.98;margin:0 0 20px;color:var(--olive-deep);text-wrap:balance;">Your jungle awaits</h1>
+      <p style="font-size:clamp(17px,2vw,20px);line-height:1.55;color:var(--muted);max-width:42ch;margin:0 0 30px;">Rare leaves, easy companions and curated <em style="color:var(--marigold-deep);font-style:normal;">3&nbsp;Wishes</em> trios — chosen with care and delivered across Egypt.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="Shop.dc.html" style="font-family:'Fraunces';font-weight:600;font-size:16px;text-decoration:none;background:var(--olive);color:var(--cream);padding:15px 30px;border-radius:var(--r-pill);box-shadow:var(--shadow);transition:.16s;" style-hover="background:var(--olive-deep);transform:translateY(-2px);">Shop all plants</a>
+        <a href="#wishes" style="font-family:'Fraunces';font-weight:600;font-size:16px;text-decoration:none;background:transparent;color:var(--marigold-deep);border:1.5px solid var(--marigold);padding:14px 28px;border-radius:var(--r-pill);transition:.16s;" style-hover="background:var(--marigold);color:var(--olive-deep);">Make a wish ✦</a>
+      </div>
+    </div>
+    <div style="flex:1 1 360px;min-width:300px;position:relative;">
+      <image-slot id="home-hero" shape="rounded" radius="24" placeholder="Drop hero plant photo" style="width:100%;height:clamp(320px,42vw,520px);display:block;box-shadow:var(--shadow);"></image-slot>
+      <div style="position:absolute;bottom:18px;left:18px;background:rgba(251,247,234,.94);backdrop-filter:blur(6px);border-radius:var(--r-md);padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" style="animation:jg-sparkle 3s ease-in-out infinite;"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z" fill="#FCB53B"/></svg>
+        <span style="font-family:'Fraunces';font-weight:500;font-size:14px;color:var(--olive-deep);">Healthy-arrival promise</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY TILES -->
+  <section style="max-width:1280px;margin:0 auto;padding:36px 5vw;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;">
+      <a href="Shop.dc.html" style="position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--olive);color:var(--cream);padding:26px;min-height:150px;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow);transition:.2s;" style-hover="transform:translateY(-4px);"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="position:absolute;top:18px;right:18px;opacity:.5;"><path d="M12 21V9M12 9C12 5 9 3 5 3c0 4 3 6 7 6Zm0 0c0-4 3-6 7-6 0 4-3 6-7 6Z" stroke="#FBF7EA" stroke-width="1.4" stroke-linejoin="round"/></svg><span style="font-family:'Wonderia',serif;font-size:26px;line-height:1;">Indoor</span><span style="font-size:13px;opacity:.85;margin-top:4px;">Leafy companions for every room</span></a>
+      <a href="Shop.dc.html" style="position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--rose-clay);color:var(--cream);padding:26px;min-height:150px;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow);transition:.2s;" style-hover="transform:translateY(-4px);"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="position:absolute;top:18px;right:18px;opacity:.5;"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 16l-5 2.6 1-5.5-4-3.9 5.5-.8z" stroke="#FBF7EA" stroke-width="1.3" stroke-linejoin="round"/></svg><span style="font-family:'Wonderia',serif;font-size:26px;line-height:1;">Rare finds</span><span style="font-size:13px;opacity:.9;margin-top:4px;">For the collector's shelf</span></a>
+      <a href="Shop.dc.html" style="position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--canvas-alt);color:var(--olive-deep);padding:26px;min-height:150px;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow);transition:.2s;" style-hover="transform:translateY(-4px);"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="position:absolute;top:18px;right:18px;opacity:.4;"><path d="M5 21c0-6 3-9 7-9M19 21c0-6-3-9-7-9m0 0V4" stroke="#33401C" stroke-width="1.4" stroke-linecap="round"/></svg><span style="font-family:'Wonderia',serif;font-size:26px;line-height:1;">Low-light</span><span style="font-size:13px;opacity:.75;margin-top:4px;">Thrive in dim corners</span></a>
+      <a href="Shop.dc.html" style="position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--olive-deep);color:var(--cream);padding:26px;min-height:150px;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow);transition:.2s;" style-hover="transform:translateY(-4px);"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="position:absolute;top:18px;right:18px;opacity:.45;"><circle cx="12" cy="12" r="9" stroke="#FCB53B" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke="#FCB53B" stroke-width="1.3" stroke-linecap="round"/></svg><span style="font-family:'Wonderia',serif;font-size:26px;line-height:1;">Pots</span><span style="font-size:13px;opacity:.85;margin-top:4px;">Terracotta &amp; glazed finishes</span></a>
+    </div>
+  </section>
+
+  <!-- 3 WISHES -->
+  <section id="wishes" style="background:linear-gradient(180deg,var(--cream),#FFF9E4 50%,var(--cream));padding:56px 5vw 64px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:38px;">
+        <p style="display:inline-flex;align-items:center;gap:8px;font-family:'Fraunces';font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--marigold-deep);margin:0 0 8px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" style="animation:jg-sparkle 2.6s ease-in-out infinite;"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z" fill="#E09A24"/></svg>
+          The signature trios
+        </p>
+        <h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(34px,5vw,56px);margin:0;color:var(--olive-deep);">Make three wishes</h2>
+        <p style="color:var(--muted);font-size:17px;max-width:46ch;margin:14px auto 0;line-height:1.55;">Curated plant trios that just belong together — granted at a friendlier price.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch;">
+        <dc-import name="WishCard" hint-size="100%,440px" title-text="First Wish" subtitle-text="Beginner's Trio" items="{{ wish1 }}" price="600" save-text="Hard to kill" on-add="{{ addToCart }}"></dc-import>
+        <dc-import name="WishCard" hint-size="100%,440px" title-text="Second Wish" subtitle-text="Air Genie" items="{{ wish2 }}" price="780" save-text="Air-purifying" on-add="{{ addToCart }}"></dc-import>
+        <dc-import name="WishCard" hint-size="100%,440px" title-text="Third Wish" subtitle-text="Statement Corner" items="{{ wish3 }}" price="2,400" save-text="Big &amp; bold" on-add="{{ addToCart }}"></dc-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section style="max-width:1280px;margin:0 auto;padding:56px 5vw 24px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px;">
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--marigold-deep);margin:0 0 6px;">Fresh from the genie</p>
+        <h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:0;color:var(--olive-deep);">New arrivals</h2>
+      </div>
+      <a href="Shop.dc.html" style="font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--olive);text-decoration:none;border-bottom:1.5px solid var(--marigold);padding-bottom:3px;">Shop all →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px;">
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Monstera Albo" family="Monstera" price="3,500" image-id="home-p1" on-add="{{ addToCart }}"></dc-import>
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Philodendron Patriciae" family="Philodendron" price="2,500" image-id="home-p2" on-add="{{ addToCart }}"></dc-import>
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Anthurium Clarinervium" family="Anthurium" price="1,250" image-id="home-p3" on-add="{{ addToCart }}"></dc-import>
+      <dc-import name="ProductCard" hint-size="100%,420px" name-text="Bonsai Tree" family="Bonsai" price="1,200" sale="1,500" image-id="home-p4" on-add="{{ addToCart }}"></dc-import>
+    </div>
+  </section>
+
+  <!-- leafy divider -->
+  <div style="display:flex;align-items:center;justify-content:center;gap:18px;padding:40px 5vw 8px;max-width:1280px;margin:0 auto;">
+    <span style="flex:1;height:1px;background:var(--line);"></span>
+    <svg width="120" height="22" viewBox="0 0 120 22" fill="none"><path d="M0 11H44M76 11H120" stroke="#84994F" stroke-width="1.2"/><path d="M60 2C53 6 53 16 60 20C67 16 67 6 60 2Z" stroke="#84994F" stroke-width="1.2" fill="rgba(132,153,79,.12)"/><path d="M60 5V17" stroke="#84994F" stroke-width=".9"/><path d="M50 11C46 8 44 9 43 11C44 13 46 14 50 11Z" fill="#84994F" opacity=".5"/><path d="M70 11C74 8 76 9 77 11C76 13 74 14 70 11Z" fill="#84994F" opacity=".5"/></svg>
+    <span style="flex:1;height:1px;background:var(--line);"></span>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cart: 0 };
+  renderVals() {
+    return {
+      cart: this.state.cart,
+      addToCart: () => this.setState(s => ({ cart: s.cart + 1 })),
+      wish1: [{ name: 'Snake Plant', id: 'home-w1-0' }, { name: 'Marble Queen Pothos', id: 'home-w1-1' }, { name: 'ZZ Plant', id: 'home-w1-2' }],
+      wish2: [{ name: 'Peace Lily', id: 'home-w2-0' }, { name: 'Spider Plant', id: 'home-w2-1' }, { name: 'Areca Palm', id: 'home-w2-2' }],
+      wish3: [{ name: 'Monstera Deliciosa', id: 'home-w3-0' }, { name: 'Rhapis Palm', id: 'home-w3-1' }, { name: 'Fiddle Leaf', id: 'home-w3-2' }],
+    };
+  }
+}
+</script>
+</body>
+</html>

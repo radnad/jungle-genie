@@ -1,0 +1,23 @@
+{
+  "_comment": "Edit any value below to update your site. No code changes needed.",
+  "brand": "Jungle Genie",
+  "tagline": "Nurturing Nature",
+  "heroHeadline": "Your jungle awaits",
+  "heroSubline": "Rare leaves, easy companions and curated 3 Wishes trios - chosen with care and delivered across Egypt.",
+  "heroCTA": "Shop all plants",
+  "heroSecondaryCTA": "Make a wish",
+  "delivery": "Delivered across Egypt",
+  "deliveryNote": "Delivered across Egypt - carefully boxed with care notes tucked in.",
+  "instagram": "https://www.instagram.com/junglegenieeg",
+  "instagramHandle": "@junglegenieeg",
+  "newsletterHeadline": "Make a wish",
+  "newsletterSubline": "Care tips and first peek at new arrivals.",
+  "newsletterPlaceholder": "you@email.com",
+  "newsletterCTA": "Join",
+  "healthyArrivalPromise": "Healthy-arrival promise",
+  "contact": {
+    "email": "hello@junglegenieeg.com",
+    "note": "Online only - no physical store, no pickup"
+  },
+  "copyright": "2026 Jungle Genie · Online-only plant shop, Egypt"
+}

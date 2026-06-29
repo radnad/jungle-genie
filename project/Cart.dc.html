@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Wonderia';src:url('assets/fonts/Wonderia.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+:root{--olive:#84994F;--butter:#FFE797;--marigold:#FCB53B;--rose-clay:#B45253;--cream:#FBF7EA;--canvas-alt:#F2ECD9;--olive-deep:#33401C;--ink:#2C3019;--muted:#5A6147;--line:#E7DFC8;--marigold-deep:#E09A24;--r-sm:10px;--r-md:16px;--r-lg:24px;--r-pill:999px;--shadow:0 6px 20px rgba(51,64,28,.10);}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--cream);}
+@keyframes jg-sparkle{0%,100%{opacity:.4;transform:scale(.75) rotate(-10deg);}50%{opacity:1;transform:scale(1.15) rotate(12deg);}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Fraunces',serif;color:var(--ink);background:var(--cream);min-height:100vh;-webkit-font-smoothing:antialiased;">
+
+  <dc-import name="Nav" cart-count="{{ cartCount }}" hint-size="100%,72px"></dc-import>
+
+  <section style="max-width:1180px;margin:0 auto;padding:40px 5vw 8px;">
+    <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--marigold-deep);margin:0 0 6px;">Your basket</p>
+    <h1 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(36px,5vw,58px);margin:0;color:var(--olive-deep);">Granting your wishes</h1>
+  </section>
+
+  <section style="max-width:1180px;margin:0 auto;padding:24px 5vw 64px;display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
+
+    <!-- line items -->
+    <div style="flex:1 1 460px;min-width:300px;">
+      <sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <sc-for list="{{ items }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:16px;box-shadow:var(--shadow);align-items:center;">
+              <image-slot id="{{ it.id }}" shape="rounded" radius="12" placeholder="" style="width:96px;height:96px;flex-shrink:0;display:block;background:var(--canvas-alt);"></image-slot>
+              <div style="flex:1;min-width:0;">
+                <sc-if value="{{ it.isBundle }}" hint-placeholder-val="{{ false }}">
+                  <span style="display:inline-flex;align-items:center;gap:5px;font-family:'Fraunces';font-weight:600;font-size:10px;letter-spacing:.06em;background:var(--marigold);color:var(--olive-deep);padding:3px 9px;border-radius:var(--r-pill);margin-bottom:6px;">✦ 3 WISHES</span>
+                </sc-if>
+                <sc-if value="{{ it.notBundle }}" hint-placeholder-val="{{ true }}">
+                  <span style="display:inline-block;font-family:'Fraunces';font-weight:600;font-size:11px;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:4px 10px;border-radius:var(--r-pill);margin-bottom:6px;">{{ it.tag }}</span>
+                </sc-if>
+                <h3 style="font-family:'Wonderia',serif;font-weight:400;font-size:21px;line-height:1.1;margin:0 0 4px;color:var(--olive-deep);">{{ it.name }}</h3>
+                <p style="margin:0;font-size:13px;color:var(--muted);">{{ it.sub }}</p>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;">
+                <span style="font-family:'Fraunces';font-weight:600;font-size:18px;color:var(--ink);font-variant-numeric:lining-nums;">{{ it.lineStr }} EGP</span>
+                <div style="display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:var(--r-pill);overflow:hidden;background:var(--cream);">
+                  <button onClick="{{ it.dec }}" style="font-family:'Fraunces';font-size:18px;border:none;background:transparent;color:var(--olive-deep);width:36px;height:36px;cursor:pointer;line-height:1;">−</button>
+                  <span style="font-family:'Fraunces';font-weight:600;font-size:15px;min-width:30px;text-align:center;font-variant-numeric:lining-nums;">{{ it.qty }}</span>
+                  <button onClick="{{ it.inc }}" style="font-family:'Fraunces';font-size:18px;border:none;background:transparent;color:var(--olive-deep);width:36px;height:36px;cursor:pointer;line-height:1;">+</button>
+                </div>
+                <button onClick="{{ it.remove }}" style="font-family:'Fraunces';font-size:12px;background:none;border:none;color:var(--muted);cursor:pointer;text-decoration:underline;">Remove</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <a href="Shop.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--olive);text-decoration:none;margin-top:22px;">← Continue shopping</a>
+      </sc-if>
+
+      <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center;padding:70px 20px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" style="margin-bottom:14px;"><path d="M6 8h12l-1 11a2 2 0 01-2 1.8H9A2 2 0 017 19L6 8Z" stroke="#84994F" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8a3 3 0 016 0" stroke="#84994F" stroke-width="1.5"/></svg>
+          <p style="font-family:'Wonderia',serif;font-size:28px;color:var(--olive-deep);margin:0 0 6px;">Your basket is resting</p>
+          <p style="margin:0 0 18px;color:var(--muted);">Make a wish and your jungle will start to grow.</p>
+          <a href="Shop.dc.html" style="display:inline-block;font-family:'Fraunces';font-weight:600;font-size:15px;text-decoration:none;background:var(--olive);color:var(--cream);padding:13px 28px;border-radius:var(--r-pill);">Browse plants</a>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- summary -->
+    <aside style="flex:0 1 340px;min-width:280px;position:sticky;top:88px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow);">
+      <h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:26px;margin:0 0 18px;color:var(--olive-deep);">Order summary</h2>
+      <div style="display:flex;justify-content:space-between;font-size:15px;color:var(--muted);padding:8px 0;"><span>Subtotal</span><span style="color:var(--ink);font-variant-numeric:lining-nums;">{{ subtotalStr }} EGP</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:15px;color:var(--muted);padding:8px 0;"><span>Delivery</span><span style="color:var(--olive);font-weight:600;">{{ deliveryStr }}</span></div>
+      <div style="height:1px;background:var(--line);margin:12px 0;"></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:4px 0 18px;"><span style="font-family:'Fraunces';font-weight:600;font-size:17px;">Total</span><span style="font-family:'Fraunces';font-weight:600;font-size:26px;color:var(--ink);font-variant-numeric:lining-nums;">{{ totalStr }} EGP</span></div>
+      <button style="width:100%;font-family:'Fraunces';font-weight:600;font-size:16px;border:none;background:var(--olive);color:var(--cream);padding:15px;border-radius:var(--r-pill);cursor:pointer;box-shadow:var(--shadow);transition:.16s;" style-hover="background:var(--olive-deep);">Checkout</button>
+
+      <div style="display:flex;align-items:center;gap:10px;margin-top:18px;background:var(--butter);border-radius:var(--r-md);padding:12px 14px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M3 13l2-6h11l3 4h2v5h-2M3 13v3h2m0-3h11m4 0v3h-2m-13 0a2 2 0 104 0m9 0a2 2 0 10-4 0" stroke="#E09A24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span style="font-size:13px;color:var(--olive-deep);line-height:1.4;">Delivered across Egypt — carefully boxed with care notes tucked in.</span>
+      </div>
+      <p style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin:14px 0 0;justify-content:center;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke="#5A6147" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#5A6147" stroke-width="1.6"/></svg>
+        Secure checkout · prices in EGP
+      </p>
+    </aside>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    items: [
+      { key:'i1', id:'cart-1', name:'Monstera Albo', tag:'Monstera', sub:'Large · 80cm pot', price:3500, qty:1, isBundle:false },
+      { key:'i2', id:'cart-2', name:"First Wish · Beginner's Trio", sub:'Snake Plant · Marble Queen Pothos · ZZ', price:600, qty:1, isBundle:true },
+      { key:'i3', id:'cart-3', name:'Marble Queen Pothos', tag:'Pothos', sub:'Medium · hanging', price:350, qty:2, isBundle:false },
+    ],
+  };
+  fmt(n){ return Number(n).toLocaleString('en-US'); }
+  renderVals(){
+    const items=this.state.items.map(it=>({
+      ...it,
+      notBundle: !it.isBundle,
+      lineStr: this.fmt(it.price*it.qty),
+      inc: ()=>this.setState(s=>({items:s.items.map(x=>x.key===it.key?{...x,qty:x.qty+1}:x)})),
+      dec: ()=>this.setState(s=>({items:s.items.map(x=>x.key===it.key?{...x,qty:Math.max(1,x.qty-1)}:x)})),
+      remove: ()=>this.setState(s=>({items:s.items.filter(x=>x.key!==it.key)})),
+    }));
+    const subtotal=this.state.items.reduce((a,b)=>a+b.price*b.qty,0);
+    const count=this.state.items.reduce((a,b)=>a+b.qty,0);
+    const freeDelivery=subtotal>=1000;
+    const delivery=freeDelivery?0:75;
+    return {
+      items, cartCount:count,
+      hasItems: items.length>0, empty: items.length===0,
+      subtotalStr: this.fmt(subtotal),
+      deliveryStr: freeDelivery? 'Free' : this.fmt(delivery)+' EGP',
+      totalStr: this.fmt(subtotal+delivery),
+    };
+  }
+}
+</script>
+</body>
+</html>

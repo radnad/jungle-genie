@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Wonderia';src:url('assets/fonts/Wonderia.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+:root{--olive:#84994F;--butter:#FFE797;--marigold:#FCB53B;--rose-clay:#B45253;--cream:#FBF7EA;--canvas-alt:#F2ECD9;--olive-deep:#33401C;--ink:#2C3019;--muted:#5A6147;--line:#E7DFC8;--marigold-deep:#E09A24;--r-sm:10px;--r-md:16px;--r-lg:24px;--r-pill:999px;--shadow:0 6px 20px rgba(51,64,28,.10);}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</helmet>
+
+<div style="font-family:'Fraunces',serif;position:sticky;top:0;z-index:50;background:rgba(251,247,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 5vw;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;">
+
+    <!-- wordmark -->
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4C12 12 12 20 20 36C28 20 28 12 20 4Z" stroke="#84994F" stroke-width="1.8" fill="rgba(252,181,59,.16)"/><path d="M20 10V32" stroke="#84994F" stroke-width="1.2"/></svg>
+      <span style="font-family:'Wonderia',serif;font-size:25px;color:var(--olive-deep);line-height:1;">Jungle Genie</span>
+    </a>
+
+    <!-- desktop links -->
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;align-items:center;gap:6px;">
+        <div onMouseEnter="{{ openIndoor }}" onMouseLeave="{{ closeMega }}" style="position:relative;">
+          <a href="Shop.dc.html" style="font-family:'Fraunces';font-weight:500;font-size:15px;color:var(--ink);text-decoration:none;padding:10px 14px;border-radius:var(--r-pill);display:inline-flex;align-items:center;gap:5px;">Indoor <span style="font-size:9px;color:var(--muted);">▾</span></a>
+          <sc-if value="{{ indoorOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:46px;left:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);box-shadow:0 14px 36px rgba(51,64,28,.16);padding:14px;min-width:210px;">
+              <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:10px;color:var(--marigold-deep);margin:2px 8px 10px;">By need</p>
+              <a href="Shop.dc.html" style="display:block;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Large statement plants</a>
+              <a href="Shop.dc.html" style="display:block;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Rare &amp; collectible</a>
+              <a href="Shop.dc.html" style="display:block;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Hanging &amp; trailing</a>
+              <a href="Shop.dc.html" style="display:block;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Low-light friendly</a>
+              <a href="Shop.dc.html" style="display:block;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Air-purifying</a>
+            </div>
+          </sc-if>
+        </div>
+
+        <div onMouseEnter="{{ openFamilies }}" onMouseLeave="{{ closeMega }}" style="position:relative;">
+          <a href="Shop.dc.html" style="font-family:'Fraunces';font-weight:500;font-size:15px;color:var(--ink);text-decoration:none;padding:10px 14px;border-radius:var(--r-pill);display:inline-flex;align-items:center;gap:5px;">Plant Families <span style="font-size:9px;color:var(--muted);">▾</span></a>
+          <sc-if value="{{ familiesOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:46px;left:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);box-shadow:0 14px 36px rgba(51,64,28,.16);padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:2px 18px;min-width:300px;">
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Monstera</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Philodendron</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Alocasia</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Calathea</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Syngonium</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Anthurium</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Aglaonema</a>
+              <a href="Shop.dc.html" style="padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-size:14px;" style-hover="background:var(--canvas-alt);">Begonia</a>
+            </div>
+          </sc-if>
+        </div>
+
+        <a href="Home.dc.html" style="font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--marigold-deep);text-decoration:none;padding:10px 14px;border-radius:var(--r-pill);display:inline-flex;align-items:center;gap:5px;">✦ Bundles</a>
+        <a href="Shop.dc.html" style="font-family:'Fraunces';font-weight:500;font-size:15px;color:var(--ink);text-decoration:none;padding:10px 14px;">Outdoor</a>
+        <a href="Shop.dc.html" style="font-family:'Fraunces';font-weight:500;font-size:15px;color:var(--ink);text-decoration:none;padding:10px 14px;">Pots</a>
+      </nav>
+    </sc-if>
+
+    <!-- actions -->
+    <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+      <button aria-label="Search" style="width:42px;height:42px;border:none;background:transparent;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:var(--canvas-alt);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#33401C" stroke-width="1.7"/><path d="M16.5 16.5L21 21" stroke="#33401C" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+      <button aria-label="Wishlist" style="position:relative;width:42px;height:42px;border:none;background:transparent;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:var(--canvas-alt);"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M12 20s-6.5-4.6-9-8.6C1.5 9 2.7 6.3 5.5 6.3c1.8 0 2.9 1 3.6 2 .7-1 1.8-2 3.6-2 2.8 0 4 2.7 2.5 5.1C18.5 15.4 12 20 12 20Z" stroke="#B45253" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+      <a href="Cart.dc.html" aria-label="Cart" style="position:relative;width:42px;height:42px;border:none;background:transparent;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;text-decoration:none;" style-hover="background:var(--canvas-alt);">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 11a2 2 0 01-2 1.8H9A2 2 0 017 19L6 8Z" stroke="#33401C" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8a3 3 0 016 0" stroke="#33401C" stroke-width="1.6"/></svg>
+        <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;top:4px;right:3px;min-width:18px;height:18px;padding:0 4px;background:var(--marigold);color:var(--olive-deep);font-family:'Fraunces';font-weight:600;font-size:11px;border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center;font-variant-numeric:lining-nums;">{{ cartCount }}</span></sc-if>
+      </a>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleMenu }}" aria-label="Menu" style="width:42px;height:42px;border:none;background:transparent;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#33401C" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      </sc-if>
+    </div>
+  </div>
+
+  <!-- mobile drawer -->
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid var(--line);background:var(--cream);padding:14px 5vw 22px;">
+      <a href="Shop.dc.html" style="display:block;font-family:'Wonderia',serif;font-size:22px;color:var(--olive-deep);text-decoration:none;padding:10px 0;">Indoor</a>
+      <a href="Shop.dc.html" style="display:block;font-family:'Wonderia',serif;font-size:22px;color:var(--olive-deep);text-decoration:none;padding:10px 0;">Plant Families</a>
+      <a href="Home.dc.html" style="display:block;font-family:'Wonderia',serif;font-size:22px;color:var(--marigold-deep);text-decoration:none;padding:10px 0;">✦ Bundles</a>
+      <a href="Shop.dc.html" style="display:block;font-family:'Wonderia',serif;font-size:22px;color:var(--olive-deep);text-decoration:none;padding:10px 0;">Outdoor</a>
+      <a href="Shop.dc.html" style="display:block;font-family:'Wonderia',serif;font-size:22px;color:var(--olive-deep);text-decoration:none;padding:10px 0;">Pots</a>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:160},&quot;cartCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { vw: 1280, menuOpen: false, mega: null };
+  componentDidMount() {
+    this._on = () => this.setState({ vw: window.innerWidth });
+    this._on();
+    window.addEventListener('resize', this._on);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._on); }
+  renderVals() {
+    const isMobile = this.state.vw < 880;
+    const cc = this.props.cartCount;
+    const count = cc == null ? 0 : Number(cc);
+    return {
+      isMobile, isDesktop: !isMobile,
+      menuOpen: isMobile && this.state.menuOpen,
+      indoorOpen: this.state.mega === 'indoor',
+      familiesOpen: this.state.mega === 'families',
+      hasCart: count > 0,
+      cartCount: count,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      openIndoor: () => this.setState({ mega: 'indoor' }),
+      openFamilies: () => this.setState({ mega: 'families' }),
+      closeMega: () => this.setState({ mega: null }),
+    };
+  }
+}
+</script>
+</body>
+</html>

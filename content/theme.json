@@ -1,0 +1,29 @@
+{
+  "_comment": "These are the brand colors and fonts. Changing a value here changes it everywhere on the site. After editing, rebuild the site for changes to take effect.",
+  "colors": {
+    "olive": "#84994F",
+    "butter": "#FFE797",
+    "marigold": "#FCB53B",
+    "marigoldDeep": "#E09A24",
+    "roseClay": "#B45253",
+    "cream": "#FBF7EA",
+    "canvasAlt": "#F2ECD9",
+    "oliveDeep": "#33401C",
+    "ink": "#2C3019",
+    "muted": "#5A6147",
+    "line": "#E7DFC8"
+  },
+  "fonts": {
+    "display": "Wonderia",
+    "displayNote": "Used for all headers, the wordmark, and section titles. This is a self-hosted font in public/fonts/Wonderia.otf.",
+    "body": "Fraunces",
+    "bodyNote": "Used for all body text, prices, labels, and UI elements. Loaded from Google Fonts."
+  },
+  "radius": {
+    "sm": "10px",
+    "md": "16px",
+    "lg": "24px",
+    "pill": "999px"
+  },
+  "shadow": "0 6px 20px rgba(51,64,28,0.10)"
+}

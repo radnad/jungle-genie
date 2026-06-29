@@ -1,0 +1,557 @@
+[
+  {
+    "_comment": "To edit a product: change any field below and save. 'imageUrl' can be left empty (the photo script fills it) or paste any photo URL here to override. 'salePriceEGP' = null means no sale.",
+    "id": "monstera-albo",
+    "name": "Monstera Albo",
+    "slug": "monstera-albo",
+    "family": "Monstera",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 3500,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "imageNote": "Rare cultivar. Pexels may return the plain Monstera deliciosa instead. Paste a specific URL here if you have a better photo.",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Large · 80cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "collector"
+    ],
+    "isNewArrival": true,
+    "description": "The collector's crown jewel - creamy variegated splits on every leaf. A little theatrical, endlessly rewarding."
+  },
+  {
+    "id": "philodendron-patriciae",
+    "name": "Philodendron Patriciae",
+    "slug": "philodendron-patriciae",
+    "family": "Philodendron",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 2500,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "collector"
+    ],
+    "isNewArrival": true,
+    "description": "Long, ruffled leaves with a velvet-like texture. A statement piece that rewards patience with ever bigger foliage."
+  },
+  {
+    "id": "monstera-adansonii-variegated",
+    "name": "Monstera Adansonii Variegated",
+    "slug": "monstera-adansonii-variegated",
+    "family": "Monstera",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 2500,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "hanging"
+    ],
+    "isNewArrival": false,
+    "description": "Swiss-cheese leaves with creamy white splashes. Trails beautifully from a high shelf or hanging basket."
+  },
+  {
+    "id": "caramel-marble-philodendron",
+    "name": "Caramel Marble Philodendron",
+    "slug": "caramel-marble-philodendron",
+    "family": "Philodendron",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 3250,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "collector"
+    ],
+    "isNewArrival": false,
+    "description": "Warm caramel and cream marbling on glossy leaves. Every new unfurl is a small event."
+  },
+  {
+    "id": "anthurium-clarinervium",
+    "name": "Anthurium Clarinervium",
+    "slug": "anthurium-clarinervium",
+    "family": "Anthurium",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 1250,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Medium indirect",
+      "water": "Every 10 days",
+      "petSafe": false,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "velvet"
+    ],
+    "isNewArrival": true,
+    "description": "Heart-shaped velvet leaves with silver veins that glow in soft light. Quiet drama at its finest."
+  },
+  {
+    "id": "strawberry-shake-philodendron",
+    "name": "Strawberry Shake Philodendron",
+    "slug": "strawberry-shake-philodendron",
+    "family": "Philodendron",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 1600,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "imageNote": "Rare cultivar. Paste a specific URL for best results - Pexels may return the wrong philodendron.",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "collector"
+    ],
+    "isNewArrival": false,
+    "description": "Pink, cream, and green variegation that looks like a painting. Each leaf is unique, none quite like the last."
+  },
+  {
+    "id": "rhapis-palm",
+    "name": "Rhapis Palm",
+    "slug": "rhapis-palm",
+    "family": "Palm",
+    "category": "Indoor",
+    "subcategory": "Large",
+    "priceEGP": 1750,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Low to bright indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Large · 100cm"
+    },
+    "tags": [
+      "indoor",
+      "large",
+      "pet-safe",
+      "air-purifying"
+    ],
+    "isNewArrival": false,
+    "description": "Elegant fan-shaped fronds on slender canes. One of the best large indoor palms - tolerates low light and is safe for pets."
+  },
+  {
+    "id": "variegated-fiddle-leaf",
+    "name": "Variegated Fiddle Leaf",
+    "slug": "variegated-fiddle-leaf",
+    "family": "Ficus",
+    "category": "Indoor",
+    "subcategory": "Large",
+    "priceEGP": 950,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Large · 120cm"
+    },
+    "tags": [
+      "indoor",
+      "large",
+      "statement"
+    ],
+    "isNewArrival": false,
+    "description": "The iconic fiddle-leaf with creamy white variegation. A bold corner plant that commands the room."
+  },
+  {
+    "id": "alocasia-frydek-variegated",
+    "name": "Alocasia Frydek Variegated",
+    "slug": "alocasia-frydek-variegated",
+    "family": "Alocasia",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 900,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "rare",
+      "velvet"
+    ],
+    "isNewArrival": false,
+    "description": "Velvety dark green leaves with white variegation and silver veins. A jewel of the Alocasia world."
+  },
+  {
+    "id": "persian-shield",
+    "name": "Persian Shield",
+    "slug": "persian-shield",
+    "family": "Strobilanthes",
+    "category": "Outdoor",
+    "subcategory": null,
+    "priceEGP": 650,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Regular",
+      "petSafe": true,
+      "size": "Small · 30cm"
+    },
+    "tags": [
+      "outdoor",
+      "colorful",
+      "pet-safe"
+    ],
+    "isNewArrival": false,
+    "description": "Iridescent purple and silver foliage that shimmers in dappled light. Effortlessly theatrical outdoors."
+  },
+  {
+    "id": "alocasia-low-rider",
+    "name": "Alocasia Low Rider",
+    "slug": "alocasia-low-rider",
+    "family": "Alocasia",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 700,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Small · 40cm"
+    },
+    "tags": [
+      "indoor",
+      "compact"
+    ],
+    "isNewArrival": false,
+    "description": "A dwarf Alocasia that packs all the drama of its larger cousins into a compact, tabletop form."
+  },
+  {
+    "id": "marble-queen-pothos",
+    "name": "Marble Queen Pothos",
+    "slug": "marble-queen-pothos",
+    "family": "Pothos",
+    "category": "Indoor",
+    "subcategory": "Hanging",
+    "priceEGP": 350,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Low to bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · trailing"
+    },
+    "tags": [
+      "indoor",
+      "easy",
+      "hanging",
+      "low-light"
+    ],
+    "isNewArrival": false,
+    "description": "Cream and green marbled leaves on long, graceful vines. One of the most forgiving plants you can own."
+  },
+  {
+    "id": "snake-plant-zeylanica",
+    "name": "Snake Plant Zeylanica",
+    "slug": "snake-plant-zeylanica",
+    "family": "Sansevieria",
+    "category": "Indoor",
+    "subcategory": "Low Light",
+    "priceEGP": 450,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Low to bright indirect",
+      "water": "Monthly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "easy",
+      "low-light",
+      "air-purifying"
+    ],
+    "isNewArrival": false,
+    "description": "Architectural upright leaves with silver-green banding. Thrives on neglect. Perfect for busy plant parents."
+  },
+  {
+    "id": "ficus-burgundy",
+    "name": "Ficus Burgundy",
+    "slug": "ficus-burgundy",
+    "family": "Ficus",
+    "category": "Indoor",
+    "subcategory": "Large",
+    "priceEGP": 350,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Large · 90cm"
+    },
+    "tags": [
+      "indoor",
+      "large",
+      "statement"
+    ],
+    "isNewArrival": false,
+    "description": "Deep burgundy leaves that deepen to near-black in bright light. A bold, moody statement plant."
+  },
+  {
+    "id": "aloe-vera",
+    "name": "Aloe Vera",
+    "slug": "aloe-vera",
+    "family": "Succulent",
+    "category": "Outdoor",
+    "subcategory": null,
+    "priceEGP": 150,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Full sun",
+      "water": "Monthly",
+      "petSafe": false,
+      "size": "Small · 30cm"
+    },
+    "tags": [
+      "outdoor",
+      "easy",
+      "succulent"
+    ],
+    "isNewArrival": false,
+    "description": "A household essential. Gel-packed leaves soothe minor burns, and it asks almost nothing in return."
+  },
+  {
+    "id": "bonsai-tree",
+    "name": "Bonsai Tree",
+    "slug": "bonsai-tree",
+    "family": "Bonsai",
+    "category": "Outdoor",
+    "subcategory": null,
+    "priceEGP": 1200,
+    "salePriceEGP": 1500,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Small · 40cm"
+    },
+    "tags": [
+      "outdoor",
+      "bonsai",
+      "gift",
+      "sale"
+    ],
+    "isNewArrival": true,
+    "description": "A living sculpture shaped over years. Each one is unique - patient art for the patient plant lover."
+  },
+  {
+    "id": "zz-plant",
+    "name": "ZZ Plant",
+    "slug": "zz-plant",
+    "family": "Zamioculcas",
+    "category": "Indoor",
+    "subcategory": "Low Light",
+    "priceEGP": 350,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Low to bright indirect",
+      "water": "Monthly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "easy",
+      "low-light"
+    ],
+    "isNewArrival": false,
+    "description": "Glossy, deep green oval leaves on graceful arching stems. Practically impossible to kill - water it when you remember."
+  },
+  {
+    "id": "peace-lily",
+    "name": "Peace Lily",
+    "slug": "peace-lily",
+    "family": "Spathiphyllum",
+    "category": "Indoor",
+    "subcategory": "Air Purifying",
+    "priceEGP": 350,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Low to medium indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "air-purifying",
+      "flowering"
+    ],
+    "isNewArrival": false,
+    "description": "White sail-like blooms above glossy green leaves. One of the best plants for cleaner indoor air."
+  },
+  {
+    "id": "spider-plant",
+    "name": "Spider Plant",
+    "slug": "spider-plant",
+    "family": "Chlorophytum",
+    "category": "Indoor",
+    "subcategory": "Air Purifying",
+    "priceEGP": 250,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Medium · trailing"
+    },
+    "tags": [
+      "indoor",
+      "easy",
+      "air-purifying",
+      "hanging",
+      "pet-safe"
+    ],
+    "isNewArrival": false,
+    "description": "Arching green and cream striped leaves with cascading plantlets. Cheerful, fast-growing, and safe for cats and dogs."
+  },
+  {
+    "id": "areca-palm",
+    "name": "Areca Palm",
+    "slug": "areca-palm",
+    "family": "Palm",
+    "category": "Indoor",
+    "subcategory": "Air Purifying",
+    "priceEGP": 450,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Large · 150cm"
+    },
+    "tags": [
+      "indoor",
+      "large",
+      "air-purifying",
+      "pet-safe"
+    ],
+    "isNewArrival": false,
+    "description": "Feathery, tropical fronds that bring a holiday mood indoors. One of the top air-purifying palms, and pet-friendly."
+  },
+  {
+    "id": "monstera-deliciosa",
+    "name": "Monstera Deliciosa",
+    "slug": "monstera-deliciosa",
+    "family": "Monstera",
+    "category": "Indoor",
+    "subcategory": "Large",
+    "priceEGP": 950,
+    "salePriceEGP": null,
+    "imageUrl": "",
+    "gallery": [],
+    "photographer": "",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Large · 100cm"
+    },
+    "tags": [
+      "indoor",
+      "large",
+      "statement"
+    ],
+    "isNewArrival": false,
+    "description": "The classic split-leaf Monstera. Iconic, jungly, and an absolute joy to watch unfurl each new leaf."
+  }
+]

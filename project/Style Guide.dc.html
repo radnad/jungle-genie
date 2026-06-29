@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Wonderia';src:url('assets/fonts/Wonderia.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --olive:#84994F; --butter:#FFE797; --marigold:#FCB53B; --rose-clay:#B45253;
+ --cream:#FBF7EA; --canvas-alt:#F2ECD9; --olive-deep:#33401C; --ink:#2C3019;
+ --muted:#5A6147; --line:#E7DFC8; --marigold-deep:#E09A24;
+ --r-sm:10px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+ --shadow:0 6px 20px rgba(51,64,28,.10);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--cream);}
+@keyframes jg-sparkle{0%,100%{opacity:.35;transform:scale(.75) rotate(-8deg);}50%{opacity:1;transform:scale(1.12) rotate(14deg);}}
+</style>
+</helmet>
+
+<div style="font-family:'Fraunces',serif;color:var(--ink);background:var(--cream);min-height:100vh;-webkit-font-smoothing:antialiased;">
+
+  <!-- ===== HEADER ===== -->
+  <header style="background:var(--olive-deep);color:var(--cream);padding:56px 7vw 48px;position:relative;overflow:hidden;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4C12 12 12 20 20 36C28 20 28 12 20 4Z" stroke="#FCB53B" stroke-width="1.6" fill="rgba(252,181,59,.12)"/><path d="M20 10V32" stroke="#FCB53B" stroke-width="1.2"/></svg>
+      <span style="font-family:'Fraunces',serif;font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:13px;color:var(--butter);">Jungle Genie · Design System</span>
+    </div>
+    <h1 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(48px,8vw,104px);line-height:.96;margin:0;color:var(--cream);">Nurturing Nature</h1>
+    <p style="font-family:'Fraunces',serif;font-size:clamp(16px,2vw,20px);color:var(--butter);max-width:46ch;margin:20px 0 0;line-height:1.5;opacity:.92;">A warm, premium-botanical storefront where the magic is a whisper. Tokens, components &amp; the rules that keep every wish on-brand.</p>
+  </header>
+
+  <!-- ===== COLOR ===== -->
+  <section style="padding:64px 7vw;">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:8px;"><span style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);letter-spacing:.18em;text-transform:uppercase;font-size:12px;">01</span><h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:0;color:var(--olive-deep);">Colour</h2></div>
+    <p style="color:var(--muted);max-width:54ch;margin:0 0 32px;font-size:16px;line-height:1.55;">Four-colour ColorHunt core, extended with warm neutrals for a usable UI. Gold carries the wish feeling; rose-clay warms the accents.</p>
+
+    <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 14px;">Core palette</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px;margin-bottom:40px;">
+      <div style="border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);background:#fff;"><div style="height:104px;background:#84994F;"></div><div style="padding:14px 16px;"><div style="font-weight:600;font-size:15px;">Olive</div><div style="color:var(--muted);font-size:13px;">--olive · #84994F</div><div style="color:var(--muted);font-size:12px;margin-top:4px;">Primary brand / buttons</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);background:#fff;"><div style="height:104px;background:#FFE797;"></div><div style="padding:14px 16px;"><div style="font-weight:600;font-size:15px;">Butter</div><div style="color:var(--muted);font-size:13px;">--butter · #FFE797</div><div style="color:var(--muted);font-size:12px;margin-top:4px;">Soft bg / wish glow</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);background:#fff;"><div style="height:104px;background:#FCB53B;"></div><div style="padding:14px 16px;"><div style="font-weight:600;font-size:15px;">Marigold</div><div style="color:var(--muted);font-size:13px;">--marigold · #FCB53B</div><div style="color:var(--muted);font-size:12px;margin-top:4px;">Wishes / sale / sparkle</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);background:#fff;"><div style="height:104px;background:#B45253;"></div><div style="padding:14px 16px;"><div style="font-weight:600;font-size:15px;">Rose Clay</div><div style="color:var(--muted);font-size:13px;">--rose-clay · #B45253</div><div style="color:var(--muted);font-size:12px;margin-top:4px;">Tags / hearts / terracotta</div></div></div>
+    </div>
+
+    <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 14px;">Derived neutrals</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;">
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#FBF7EA;border-bottom:1px solid var(--line);"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Cream</div><div style="color:var(--muted);font-size:12px;">--cream · #FBF7EA</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#F2ECD9;"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Canvas Alt</div><div style="color:var(--muted);font-size:12px;">--canvas-alt · #F2ECD9</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#33401C;"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Olive Deep</div><div style="color:var(--muted);font-size:12px;">--olive-deep · #33401C</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#2C3019;"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Ink</div><div style="color:var(--muted);font-size:12px;">--ink · #2C3019</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#5A6147;"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Muted</div><div style="color:var(--muted);font-size:12px;">--muted · #5A6147</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#E7DFC8;"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Line</div><div style="color:var(--muted);font-size:12px;">--line · #E7DFC8</div></div></div>
+      <div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:#fff;"><div style="height:72px;background:#E09A24;"></div><div style="padding:11px 13px;"><div style="font-weight:600;font-size:14px;">Marigold Deep</div><div style="color:var(--muted);font-size:12px;">--marigold-deep · #E09A24</div></div></div>
+    </div>
+  </section>
+
+  <!-- leafy divider -->
+  <div style="display:flex;align-items:center;justify-content:center;gap:18px;padding:8px 7vw;">
+    <span style="flex:1;height:1px;background:var(--line);"></span>
+    <svg width="120" height="22" viewBox="0 0 120 22" fill="none" aria-hidden="true"><path d="M0 11H44M76 11H120" stroke="#84994F" stroke-width="1.2"/><path d="M60 2C53 6 53 16 60 20C67 16 67 6 60 2Z" stroke="#84994F" stroke-width="1.2" fill="rgba(132,153,79,.12)"/><path d="M60 5V17" stroke="#84994F" stroke-width=".9"/><path d="M50 11C46 8 44 9 43 11C44 13 46 14 50 11Z" fill="#84994F" opacity=".5"/><path d="M70 11C74 8 76 9 77 11C76 13 74 14 70 11Z" fill="#84994F" opacity=".5"/></svg>
+    <span style="flex:1;height:1px;background:var(--line);"></span>
+  </div>
+
+  <!-- ===== TYPE ===== -->
+  <section style="padding:48px 7vw 64px;">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:8px;"><span style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);letter-spacing:.18em;text-transform:uppercase;font-size:12px;">02</span><h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:0;color:var(--olive-deep);">Type</h2></div>
+    <p style="color:var(--muted);max-width:60ch;margin:0 0 36px;font-size:16px;line-height:1.55;">Wonderia carries the wordmark and <em>every</em> header &amp; subheader. Fraunces (serif) does everything else — body, UI labels, prices and numbers, set in lining figures.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;">
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--marigold-deep);margin:0 0 18px;">Wonderia — display &amp; headers</p>
+        <div style="font-family:'Wonderia',serif;color:var(--olive-deep);line-height:1;">
+          <div style="font-size:72px;margin-bottom:6px;">Your jungle awaits</div>
+          <div style="font-size:46px;margin-bottom:6px;color:var(--ink);">Make a wish</div>
+          <div style="font-size:30px;color:var(--olive);">3 Wishes · curated trios</div>
+        </div>
+        <p style="color:var(--muted);font-size:13px;margin-top:16px;">Wordmark / H1–H4 / section titles / card names</p>
+      </div>
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--marigold-deep);margin:0 0 18px;">Fraunces — body, UI &amp; numbers</p>
+        <p style="font-family:'Fraunces';font-size:18px;line-height:1.65;color:var(--ink);margin:0 0 18px;max-width:42ch;">Bright, indirect light keeps variegation crisp. Let the top inch of soil dry before watering — your plant would rather be a touch thirsty than soggy.</p>
+        <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;">
+          <span style="font-family:'Fraunces';font-weight:600;font-size:34px;font-variant-numeric:lining-nums;color:var(--ink);">3,500 EGP</span>
+          <span style="font-family:'Fraunces';font-size:20px;text-decoration:line-through;color:var(--marigold);font-variant-numeric:lining-nums;">1,500</span>
+        </div>
+        <p style="color:var(--muted);font-size:13px;margin-top:16px;">Paragraphs · labels · prices · qty · captions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHAPE & SPACE ===== -->
+  <section style="padding:0 7vw 64px;">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:28px;"><span style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);letter-spacing:.18em;text-transform:uppercase;font-size:12px;">03</span><h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:0;color:var(--olive-deep);">Shape &amp; Space</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;">
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 16px;">Radius</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;">
+          <div style="text-align:center;"><div style="width:64px;height:64px;background:var(--canvas-alt);border:1px solid var(--line);border-radius:10px;"></div><div style="font-size:12px;color:var(--muted);margin-top:8px;">sm · 10</div></div>
+          <div style="text-align:center;"><div style="width:64px;height:64px;background:var(--canvas-alt);border:1px solid var(--line);border-radius:16px;"></div><div style="font-size:12px;color:var(--muted);margin-top:8px;">md · 16</div></div>
+          <div style="text-align:center;"><div style="width:64px;height:64px;background:var(--canvas-alt);border:1px solid var(--line);border-radius:24px;"></div><div style="font-size:12px;color:var(--muted);margin-top:8px;">lg · 24</div></div>
+          <div style="text-align:center;"><div style="width:64px;height:64px;background:var(--canvas-alt);border:1px solid var(--line);border-radius:999px;"></div><div style="font-size:12px;color:var(--muted);margin-top:8px;">pill · 999</div></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 16px;">Soft warm shadow</p>
+        <div style="width:160px;height:96px;background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;">0 6px 20px ·10%</div>
+      </div>
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 16px;">Spacing scale</p>
+        <div style="display:flex;gap:10px;align-items:flex-end;">
+          <div style="text-align:center;"><div style="width:4px;height:4px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">4</div></div>
+          <div style="text-align:center;"><div style="width:8px;height:8px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">8</div></div>
+          <div style="text-align:center;"><div style="width:12px;height:12px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">12</div></div>
+          <div style="text-align:center;"><div style="width:16px;height:16px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">16</div></div>
+          <div style="text-align:center;"><div style="width:24px;height:24px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">24</div></div>
+          <div style="text-align:center;"><div style="width:32px;height:32px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">32</div></div>
+          <div style="text-align:center;"><div style="width:48px;height:48px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">48</div></div>
+          <div style="text-align:center;"><div style="width:64px;height:64px;background:var(--olive);"></div><div style="font-size:11px;color:var(--muted);margin-top:8px;">64</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPONENTS ===== -->
+  <section style="padding:0 7vw 80px;">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:28px;"><span style="font-family:'Fraunces';font-weight:600;color:var(--marigold-deep);letter-spacing:.18em;text-transform:uppercase;font-size:12px;">04</span><h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:0;color:var(--olive-deep);">Components</h2></div>
+
+    <!-- buttons -->
+    <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;margin-bottom:24px;box-shadow:var(--shadow);">
+      <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 20px;">Buttons — default · hover · active</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
+        <div style="text-align:center;"><button style="font-family:'Fraunces';font-weight:600;font-size:15px;border:none;background:var(--olive);color:var(--cream);padding:13px 26px;border-radius:var(--r-pill);cursor:pointer;box-shadow:var(--shadow);">Add to cart</button><div style="font-size:11px;color:var(--muted);margin-top:8px;">primary · default</div></div>
+        <div style="text-align:center;"><button style="font-family:'Fraunces';font-weight:600;font-size:15px;border:none;background:var(--olive-deep);color:var(--cream);padding:13px 26px;border-radius:var(--r-pill);cursor:pointer;box-shadow:var(--shadow);">Add to cart</button><div style="font-size:11px;color:var(--muted);margin-top:8px;">primary · hover</div></div>
+        <div style="text-align:center;"><button style="font-family:'Fraunces';font-weight:600;font-size:15px;border:none;background:var(--olive-deep);color:var(--cream);padding:13px 26px;border-radius:var(--r-pill);cursor:pointer;transform:translateY(1px);opacity:.92;">Add to cart</button><div style="font-size:11px;color:var(--muted);margin-top:8px;">primary · active</div></div>
+        <div style="text-align:center;"><button style="font-family:'Fraunces';font-weight:600;font-size:15px;background:transparent;color:var(--marigold-deep);border:1.5px solid var(--marigold);padding:12px 24px;border-radius:var(--r-pill);cursor:pointer;">Make a wish</button><div style="font-size:11px;color:var(--muted);margin-top:8px;">secondary · default</div></div>
+        <div style="text-align:center;"><button style="font-family:'Fraunces';font-weight:600;font-size:15px;background:var(--marigold);color:var(--olive-deep);border:1.5px solid var(--marigold);padding:12px 24px;border-radius:var(--r-pill);cursor:pointer;">Make a wish</button><div style="font-size:11px;color:var(--muted);margin-top:8px;">secondary · hover (fill)</div></div>
+      </div>
+      <p style="color:var(--muted);font-size:13px;margin:20px 0 0;">Live: primary fades to olive-deep on hover; add-to-cart can fill marigold. Try them →</p>
+      <div style="display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;">
+        <button style="font-family:'Fraunces';font-weight:600;font-size:15px;border:none;background:var(--olive);color:var(--cream);padding:13px 26px;border-radius:var(--r-pill);cursor:pointer;box-shadow:var(--shadow);transition:.18s;" style-hover="background:var(--olive-deep);transform:translateY(-1px);">Hover me</button>
+        <button style="font-family:'Fraunces';font-weight:600;font-size:15px;background:transparent;color:var(--marigold-deep);border:1.5px solid var(--marigold);padding:12px 24px;border-radius:var(--r-pill);cursor:pointer;transition:.18s;" style-hover="background:var(--marigold);color:var(--olive-deep);">Hover me</button>
+      </div>
+    </div>
+
+    <!-- tags + care badges -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:24px;">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow);">
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 18px;">Family tags (rose-clay pill)</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="font-family:'Fraunces';font-weight:600;font-size:12px;letter-spacing:.04em;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:6px 13px;border-radius:var(--r-pill);">Monstera</span>
+          <span style="font-family:'Fraunces';font-weight:600;font-size:12px;letter-spacing:.04em;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:6px 13px;border-radius:var(--r-pill);">Philodendron</span>
+          <span style="font-family:'Fraunces';font-weight:600;font-size:12px;letter-spacing:.04em;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:6px 13px;border-radius:var(--r-pill);">Alocasia</span>
+          <span style="font-family:'Fraunces';font-weight:600;font-size:12px;letter-spacing:.04em;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:6px 13px;border-radius:var(--r-pill);">Anthurium</span>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow);">
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 18px;">Care badges</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Fraunces';font-weight:500;font-size:13px;background:var(--canvas-alt);color:var(--ink);padding:8px 13px;border-radius:var(--r-pill);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="#E09A24" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="#E09A24" stroke-width="1.6" stroke-linecap="round"/></svg>Bright indirect</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Fraunces';font-weight:500;font-size:13px;background:var(--canvas-alt);color:var(--ink);padding:8px 13px;border-radius:var(--r-pill);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 3C12 3 5 11 5 15a7 7 0 0014 0c0-4-7-12-7-12Z" stroke="#84994F" stroke-width="1.6" stroke-linejoin="round"/></svg>Weekly</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Fraunces';font-weight:500;font-size:13px;background:var(--canvas-alt);color:var(--ink);padding:8px 13px;border-radius:var(--r-pill);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 11c0-3 2-5 4-5 1 0 2 .6 3 2 1-1.4 2-2 3-2 2 0 4 2 4 5 0 4-7 9-7 9s-7-5-7-9Z" stroke="#B45253" stroke-width="1.6" stroke-linejoin="round"/></svg>Pet-safe</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Fraunces';font-weight:500;font-size:13px;background:var(--canvas-alt);color:var(--ink);padding:8px 13px;border-radius:var(--r-pill);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21V8M12 8c0-3-2-5-5-5M12 8c0-2 1.5-4 4-4" stroke="#84994F" stroke-width="1.6" stroke-linecap="round"/><rect x="8" y="18" width="8" height="3" rx="1" stroke="#84994F" stroke-width="1.6"/></svg>Medium · 60cm</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- qty stepper + price block -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:24px;">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow);">
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 18px;">Quantity stepper (live)</p>
+        <div style="display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:var(--r-pill);overflow:hidden;background:var(--cream);">
+          <button onClick="{{ dec }}" style="font-family:'Fraunces';font-size:20px;border:none;background:transparent;color:var(--olive-deep);width:46px;height:46px;cursor:pointer;line-height:1;">−</button>
+          <span style="font-family:'Fraunces';font-weight:600;font-size:18px;min-width:36px;text-align:center;font-variant-numeric:lining-nums;">{{ qty }}</span>
+          <button onClick="{{ inc }}" style="font-family:'Fraunces';font-size:20px;border:none;background:transparent;color:var(--olive-deep);width:46px;height:46px;cursor:pointer;line-height:1;">+</button>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow);">
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 18px;">Price block · sale struck in marigold</p>
+        <div style="display:flex;align-items:baseline;gap:12px;">
+          <span style="font-family:'Fraunces';font-weight:600;font-size:30px;color:var(--ink);font-variant-numeric:lining-nums;">1,200 EGP</span>
+          <span style="font-family:'Fraunces';font-size:18px;text-decoration:line-through;color:var(--marigold);font-variant-numeric:lining-nums;">1,500</span>
+          <span style="font-family:'Fraunces';font-weight:600;font-size:12px;background:rgba(180,82,83,.12);color:var(--rose-clay);padding:4px 10px;border-radius:var(--r-pill);">Save 20%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start;">
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 14px;">Product card</p>
+        <dc-import name="ProductCard" hint-size="100%,420px" name-text="Monstera Adansonii Variegated" family="Monstera" price="2,500" image-id="sg-prod-1" liked="{{ false }}"></dc-import>
+      </div>
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--marigold-deep);margin:0 0 14px;">✦ 3 Wishes bundle card — the signature moment</p>
+        <dc-import name="WishCard" hint-size="100%,440px" title-text="First Wish" subtitle-text="Beginner's Trio" items="{{ wishItems }}" price="600" save-text="Hard to kill"></dc-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== USAGE RULES ===== -->
+  <section style="background:var(--olive-deep);color:var(--cream);padding:64px 7vw;">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:28px;"><span style="font-family:'Fraunces';font-weight:600;color:var(--marigold);letter-spacing:.18em;text-transform:uppercase;font-size:12px;">05</span><h2 style="font-family:'Wonderia',serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:0;color:var(--cream);">The Soul — keep it on-brand</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+      <div style="background:rgba(251,247,234,.06);border:1px solid rgba(252,181,59,.25);border-radius:var(--r-md);padding:22px;"><div style="font-family:'Fraunces';font-weight:600;color:var(--marigold);margin-bottom:8px;">✓ Do</div><p style="margin:0;color:var(--butter);font-size:15px;line-height:1.55;opacity:.92;">Warm botanical first. Gold for the wish feeling. A faint marigold sparkle near wish &amp; bundle moments only. Encouraging, lightly enchanted copy.</p></div>
+      <div style="background:rgba(251,247,234,.06);border:1px solid rgba(180,82,83,.35);border-radius:var(--r-md);padding:22px;"><div style="font-family:'Fraunces';font-weight:600;color:#E89A9B;margin-bottom:8px;">✕ Don't</div><p style="margin:0;color:var(--butter);font-size:15px;line-height:1.55;opacity:.92;">No cartoon genies or purple mystic clichés. No rankings, followers, or review-score UI. Never "visit us / store hours" — we're online-only.</p></div>
+      <div style="background:rgba(251,247,234,.06);border:1px solid rgba(132,153,79,.4);border-radius:var(--r-md);padding:22px;"><div style="font-family:'Fraunces';font-weight:600;color:#C7D89A;margin-bottom:8px;">◷ Online-only</div><p style="margin:0;color:var(--butter);font-size:15px;line-height:1.55;opacity:.92;">Emphasise delivery &amp; care. "Delivered across Egypt." Prices in EGP, lining figures, sale prices struck in marigold.</p></div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { qty: 1 };
+  renderVals() {
+    return {
+      qty: this.state.qty,
+      inc: () => this.setState(s => ({ qty: s.qty + 1 })),
+      dec: () => this.setState(s => ({ qty: Math.max(1, s.qty - 1) })),
+      wishItems: [
+        { name: 'Snake Plant', id: 'sg-w-1' },
+        { name: 'Marble Queen Pothos', id: 'sg-w-2' },
+        { name: 'ZZ Plant', id: 'sg-w-3' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

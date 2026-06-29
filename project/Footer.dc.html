@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Wonderia';src:url('assets/fonts/Wonderia.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+:root{--olive:#84994F;--butter:#FFE797;--marigold:#FCB53B;--rose-clay:#B45253;--cream:#FBF7EA;--canvas-alt:#F2ECD9;--olive-deep:#33401C;--ink:#2C3019;--muted:#5A6147;--line:#E7DFC8;--marigold-deep:#E09A24;--r-md:16px;--r-pill:999px;}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Fraunces',serif;">
+
+  <!-- instagram strip -->
+  <section style="background:var(--canvas-alt);padding:48px 5vw;text-align:center;">
+    <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--marigold-deep);margin:0 0 6px;">Follow the jungle</p>
+    <a href="#" style="font-family:'Wonderia',serif;font-size:30px;color:var(--olive-deep);text-decoration:none;">@junglegenieeg</a>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:1100px;margin:26px auto 0;">
+      <image-slot id="ig-1" shape="rounded" radius="12" placeholder="IG 1" style="width:100%;aspect-ratio:1;display:block;background:#E7DFC8;"></image-slot>
+      <image-slot id="ig-2" shape="rounded" radius="12" placeholder="IG 2" style="width:100%;aspect-ratio:1;display:block;background:#E7DFC8;"></image-slot>
+      <image-slot id="ig-3" shape="rounded" radius="12" placeholder="IG 3" style="width:100%;aspect-ratio:1;display:block;background:#E7DFC8;"></image-slot>
+      <image-slot id="ig-4" shape="rounded" radius="12" placeholder="IG 4" style="width:100%;aspect-ratio:1;display:block;background:#E7DFC8;"></image-slot>
+      <image-slot id="ig-5" shape="rounded" radius="12" placeholder="IG 5" style="width:100%;aspect-ratio:1;display:block;background:#E7DFC8;"></image-slot>
+    </div>
+  </section>
+
+  <!-- newsletter + footer -->
+  <footer style="background:var(--olive-deep);color:var(--cream);padding:60px 5vw 36px;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;align-items:start;">
+      <div style="max-width:340px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><path d="M20 4C12 12 12 20 20 36C28 20 28 12 20 4Z" stroke="#FCB53B" stroke-width="1.8" fill="rgba(252,181,59,.14)"/><path d="M20 10V32" stroke="#FCB53B" stroke-width="1.2"/></svg>
+          <span style="font-family:'Wonderia',serif;font-size:24px;">Jungle Genie</span>
+        </div>
+        <p style="color:var(--butter);opacity:.9;font-size:15px;line-height:1.6;margin:0 0 14px;">Curated plants &amp; "3 Wishes" trios, delivered with care.</p>
+        <p style="display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--cream);background:rgba(252,181,59,.16);border:1px solid rgba(252,181,59,.3);padding:8px 14px;border-radius:var(--r-pill);margin:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M3 13l2-6h11l3 4h2v5h-2M3 13v3h2m0-3h11m4 0v3h-2m-13 0a2 2 0 104 0m9 0a2 2 0 10-4 0" stroke="#FCB53B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Delivered across Egypt
+        </p>
+      </div>
+
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--marigold);margin:0 0 14px;">Shop</p>
+        <a href="Shop.dc.html" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">Indoor plants</a>
+        <a href="Shop.dc.html" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">Rare &amp; collectible</a>
+        <a href="Home.dc.html" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">✦ 3 Wishes bundles</a>
+        <a href="Shop.dc.html" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">Pots &amp; planters</a>
+      </div>
+
+      <div>
+        <p style="font-family:'Fraunces';font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--marigold);margin:0 0 14px;">Care &amp; delivery</p>
+        <a href="#" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">Plant care guides</a>
+        <a href="#" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">Delivery &amp; timing</a>
+        <a href="#" style="display:block;color:var(--cream);opacity:.85;text-decoration:none;font-size:15px;padding:5px 0;">Healthy-arrival promise</a>
+      </div>
+
+      <div style="min-width:240px;">
+        <p style="font-family:'Wonderia',serif;font-size:22px;color:var(--cream);margin:0 0 6px;">Make a wish</p>
+        <p style="color:var(--butter);opacity:.85;font-size:14px;line-height:1.55;margin:0 0 14px;">Care tips &amp; first peek at new arrivals.</p>
+        <div style="display:flex;gap:8px;background:rgba(251,247,234,.1);border:1px solid rgba(251,247,234,.25);border-radius:var(--r-pill);padding:5px 5px 5px 16px;">
+          <input type="email" placeholder="you@email.com" style="flex:1;min-width:0;background:transparent;border:none;outline:none;color:var(--cream);font-family:'Fraunces';font-size:14px;" />
+          <button style="font-family:'Fraunces';font-weight:600;font-size:13px;border:none;background:var(--marigold);color:var(--olive-deep);padding:9px 16px;border-radius:var(--r-pill);cursor:pointer;white-space:nowrap;transition:.15s;" style-hover="background:#fff;">Join</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1100px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(251,247,234,.16);display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;color:var(--cream);opacity:.7;font-size:13px;">
+      <span>© 2026 Jungle Genie · Online-only plant shop, Egypt</span>
+      <span>Prices in EGP · @junglegenieeg</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>
