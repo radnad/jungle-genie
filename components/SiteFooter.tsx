@@ -2,8 +2,27 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Logo from './Logo';
+import Image from 'next/image';
+import BrandLogo from './BrandLogo';
+import InstagramIcon from './InstagramIcon';
 import site from '@/content/site.json';
+import productsData from '@/content/products.json';
+import type { Product } from '@/lib/types';
+
+const products = productsData as unknown as Product[];
+
+// A small "feed" of plant photos for the Instagram strip. Pulls from the
+// catalogue so it always shows real plants we actually sell.
+const IG_IDS = [
+  'monstera-deliciosa',
+  'calathea-medallion',
+  'begonia-maculata-polka-dot',
+  'aloe-vera',
+  'snake-plant-zeylanica',
+];
+const igPhotos = IG_IDS
+  .map(id => products.find(p => p.id === id))
+  .filter((p): p is Product => Boolean(p && p.imageUrl));
 
 export default function SiteFooter() {
   const [email, setEmail] = useState('');
@@ -21,27 +40,41 @@ export default function SiteFooter() {
     <footer className="font-fraunces">
       {/* instagram strip */}
       <section className="bg-canvas-alt px-[5vw] py-12 text-center">
-        <p className="font-fraunces font-semibold tracking-[.16em] uppercase text-[12px] text-marigold-deep m-0 mb-1.5">
+        <p className="font-fraunces font-semibold tracking-[.16em] uppercase text-[12px] text-marigold-deep m-0 mb-2">
           Follow the jungle
         </p>
         <a
           href={site.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-wonderia text-[30px] text-olive-deep no-underline hover:text-olive transition-colors"
+          className="inline-flex items-center gap-2.5 font-wonderia text-[28px] text-olive-deep no-underline hover:text-olive transition-colors"
         >
-          {site.instagramHandle}
+          <InstagramIcon size={26} color="#33401C" />
+          Follow us on Instagram {site.instagramHandle}
         </a>
         <div
           className="grid gap-2 max-w-[1100px] mx-auto mt-6"
           style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))' }}
         >
-          {[1, 2, 3, 4, 5].map(i => (
-            <div
-              key={i}
-              className="w-full rounded-xl bg-line"
+          {igPhotos.map(p => (
+            <a
+              key={p.id}
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-full rounded-xl overflow-hidden group"
               style={{ aspectRatio: '1', background: 'linear-gradient(135deg, #E7DFC8, #F2ECD9)' }}
-            />
+              aria-label={`${p.name} on Instagram`}
+            >
+              <Image
+                src={p.gallery?.[0] || p.imageUrl!}
+                alt={p.name}
+                fill
+                sizes="(max-width: 700px) 45vw, 200px"
+                style={{ objectFit: 'cover' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
           ))}
         </div>
       </section>
@@ -54,16 +87,8 @@ export default function SiteFooter() {
         >
           {/* brand */}
           <div className="max-w-[340px]">
-            <div className="flex items-center gap-2.5 mb-3.5">
-              <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                <path
-                  d="M20 4C12 12 12 20 20 36C28 20 28 12 20 4Z"
-                  stroke="#FCB53B"
-                  strokeWidth="1.8"
-                  fill="rgba(252,181,59,.14)"
-                />
-                <path d="M20 10V32" stroke="#FCB53B" strokeWidth="1.2" />
-              </svg>
+            <div className="flex items-center gap-3 mb-3.5">
+              <BrandLogo height={52} className="rounded-md" />
               <span className="font-wonderia text-2xl">{site.brand}</span>
             </div>
             <p className="text-butter opacity-90 text-[15px] leading-relaxed m-0 mb-3.5">
@@ -94,7 +119,7 @@ export default function SiteFooter() {
               { label: 'Indoor plants', href: '/shop' },
               { label: 'Rare & collectible', href: '/shop?subcategory=Rare' },
               { label: '✦ 3 Wishes bundles', href: '/#wishes' },
-              { label: 'Pots & planters', href: '/shop?tag=pots' },
+              { label: 'Pet-safe plants', href: '/shop?tag=pet-safe' },
             ].map(l => (
               <Link
                 key={l.label}

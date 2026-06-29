@@ -19,5 +19,12 @@
     "email": "hello@junglegenieeg.com",
     "note": "Online only - no physical store, no pickup"
   },
+  "orders": {
+    "_comment": "Where new orders are sent. whatsappNumber is digits only, no plus sign or spaces. orderEmail receives a copy when the customer taps Email instead.",
+    "whatsappNumber": "201099898787",
+    "orderEmail": "junglegenieeg@gmail.com",
+    "deliveryFeeEGP": 75,
+    "freeDeliveryThresholdEGP": 1000
+  },
   "copyright": "2026 Jungle Genie · Online-only plant shop, Egypt"
 }

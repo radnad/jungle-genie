@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import ProductCard from '@/components/ProductCard';
@@ -62,15 +63,14 @@ const CATEGORIES = [
     ),
   },
   {
-    label: 'Pots',
-    sub: 'Terracotta and glazed finishes',
-    href: '/shop?tag=pots',
+    label: 'Pet-friendly',
+    sub: 'Safe for cats and dogs',
+    href: '/shop?tag=pet-safe',
     bg: '#33401C',
     fg: '#FBF7EA',
     icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.45 }}>
-        <circle cx="12" cy="12" r="9" stroke="#FCB53B" strokeWidth="1.3" />
-        <path d="M12 7v5l3 2" stroke="#FCB53B" strokeWidth="1.3" strokeLinecap="round" />
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.5 }}>
+        <path d="M12 21c-5-3-8-6-8-10a4 4 0 017-2 4 4 0 017 2c0 4-3 7-8 10Z" stroke="#FCB53B" strokeWidth="1.3" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -125,13 +125,19 @@ export default function HomePage() {
           </div>
 
           <div style={{ flex: '1 1 360px', minWidth: '300px', position: 'relative' }}>
+            {/* Hero photo lives at public/hero.jpg. Replace that file to change it. */}
             <div
-              className="w-full rounded-lg bg-canvas-alt shadow-warm flex items-center justify-center"
+              className="relative w-full rounded-lg overflow-hidden bg-canvas-alt shadow-warm"
               style={{ height: 'clamp(320px,42vw,520px)' }}
             >
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" opacity="0.3">
-                <path d="M12 21V9M12 9C12 5 9 3 5 3c0 4 3 6 7 6Zm0 0c0-4 3-6 7-6 0 4-3 6-7 6Z" stroke="#84994F" strokeWidth="1.4" strokeLinejoin="round" />
-              </svg>
+              <Image
+                src="/hero.jpg"
+                alt="A lush bowl of mixed succulents, freshly potted"
+                fill
+                priority
+                sizes="(max-width: 800px) 90vw, 560px"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
             <div
               className="absolute bottom-4 left-4 rounded-md px-4 py-3 shadow-warm flex items-center gap-2.5"

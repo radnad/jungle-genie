@@ -158,14 +158,15 @@ export default function CartPage() {
               </span>
             </div>
 
-            <button
-              className="w-full font-fraunces font-semibold text-base border-none rounded-pill cursor-pointer py-4 shadow-warm transition-all duration-150 text-cream"
+            <Link
+              href="/checkout"
+              className="block text-center w-full font-fraunces font-semibold text-base rounded-pill cursor-pointer py-4 shadow-warm transition-all duration-150 text-cream no-underline"
               style={{ background: '#84994F' }}
               onMouseEnter={e => (e.currentTarget.style.background = '#33401C')}
               onMouseLeave={e => (e.currentTarget.style.background = '#84994F')}
             >
               Checkout
-            </button>
+            </Link>
 
             <div
               className="flex items-center gap-2.5 mt-4 rounded-md p-3"

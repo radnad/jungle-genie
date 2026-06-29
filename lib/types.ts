@@ -51,6 +51,7 @@ export interface CartState {
   addItem: (product: Omit<CartItem, 'quantity'>, qty?: number) => void;
   removeItem: (id: string) => void;
   updateQuantity: (id: string, qty: number) => void;
+  clearCart: () => void;
   itemCount: number;
   subtotal: number;
 }

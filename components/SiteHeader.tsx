@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Logo from './Logo';
+import BrandLogo from './BrandLogo';
+import InstagramIcon from './InstagramIcon';
 import { useCart } from '@/lib/cart-context';
 import { useWishlist } from '@/lib/wishlist-context';
 import productsData from '@/content/products.json';
+import site from '@/content/site.json';
 import type { Product } from '@/lib/types';
 
 const products = productsData as unknown as Product[];
@@ -56,11 +58,17 @@ export default function SiteHeader() {
         className="max-w-[1280px] mx-auto px-[5vw] flex items-center justify-between gap-5"
         style={{ height: '72px' }}
       >
-        {/* wordmark */}
-        <Link href="/" className="flex items-center gap-2.5 no-underline flex-shrink-0">
-          <Logo size={30} />
+        {/* wordmark. The logo currently links to Instagram. To point it at the
+            homepage later, swap the <a> for <Link href="/"> and drop target/rel. */}
+        <a
+          href={site.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2.5 no-underline flex-shrink-0"
+        >
+          <BrandLogo height={40} className="rounded-md" />
           <span className="font-wonderia text-[25px] text-olive-deep leading-none">Jungle Genie</span>
-        </Link>
+        </a>
 
         {/* desktop nav */}
         {!isMobile && (
@@ -165,6 +173,15 @@ export default function SiteHeader() {
 
         {/* actions */}
         <div className="flex items-center gap-1.5 flex-shrink-0">
+          <a
+            href={site.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Instagram"
+            className="w-[42px] h-[42px] rounded-full cursor-pointer flex items-center justify-center hover:bg-canvas-alt transition-colors no-underline"
+          >
+            <InstagramIcon size={20} color="#33401C" />
+          </a>
           <button
             aria-label="Search"
             className="w-[42px] h-[42px] border-none bg-transparent rounded-full cursor-pointer flex items-center justify-center hover:bg-canvas-alt transition-colors"
