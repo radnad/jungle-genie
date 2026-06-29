@@ -29,6 +29,7 @@ interface PexelsResponse {
 interface Product {
   id: string;
   name: string;
+  slug: string;
   imageUrl?: string;
   gallery?: string[];
   photographer?: string;
@@ -84,6 +85,23 @@ async function main() {
   let updated = 0;
 
   for (const product of products) {
+    // Owner photo override always wins: a file at public/plant-photos/<slug>.jpg
+    // takes priority over any fetched or pasted Pexels URL.
+    const overridePath = path.resolve(process.cwd(), 'public/plant-photos', `${product.slug}.jpg`);
+    if (fs.existsSync(overridePath)) {
+      const localPath = `/plant-photos/${product.slug}.jpg`;
+      if (product.imageUrl !== localPath) {
+        product.imageUrl = localPath;
+        product.gallery = [localPath];
+        product.photographer = 'Owner photo';
+        updated++;
+        console.log(`  Using owner photo override for ${product.name}`);
+      } else {
+        console.log(`  Owner photo already set for ${product.name}`);
+      }
+      continue;
+    }
+
     if (product.imageUrl && product.imageUrl.length > 0) {
       console.log(`  Skipping ${product.name} (already has image)`);
       continue;

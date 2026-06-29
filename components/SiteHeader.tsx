@@ -5,19 +5,33 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { useCart } from '@/lib/cart-context';
 import { useWishlist } from '@/lib/wishlist-context';
+import productsData from '@/content/products.json';
+import type { Product } from '@/lib/types';
 
-const INDOOR_LINKS = [
-  { label: 'Large statement plants', href: '/shop?subcategory=Large' },
-  { label: 'Rare & collectible', href: '/shop?subcategory=Rare' },
-  { label: 'Hanging & trailing', href: '/shop?tag=hanging' },
-  { label: 'Low-light friendly', href: '/shop?tag=low-light' },
-  { label: 'Air-purifying', href: '/shop?tag=air-purifying' },
+const products = productsData as unknown as Product[];
+
+// Indoor "by need" links. Each only appears in the menu if at least one
+// product matches it, so we never link to a dead, empty page.
+const ALL_INDOOR_LINKS = [
+  { label: 'Large statement plants', href: '/shop?subcategory=Large', match: (p: Product) => p.subcategory === 'Large' },
+  { label: 'Rare & collectible', href: '/shop?subcategory=Rare', match: (p: Product) => p.subcategory === 'Rare' },
+  { label: 'Hanging & trailing', href: '/shop?tag=hanging', match: (p: Product) => p.tags.includes('hanging') },
+  { label: 'Low-light friendly', href: '/shop?tag=low-light', match: (p: Product) => p.tags.includes('low-light') },
+  { label: 'Air-purifying', href: '/shop?tag=air-purifying', match: (p: Product) => p.tags.includes('air-purifying') },
 ];
+const INDOOR_LINKS = ALL_INDOOR_LINKS.filter(l => products.some(l.match));
 
-const FAMILIES = [
+// Curated plant families, shown in the chosen order. A family only appears
+// if it currently has products, so empty families auto-hide from the menu.
+const CURATED_FAMILIES = [
   'Monstera', 'Philodendron', 'Alocasia', 'Calathea',
   'Syngonium', 'Anthurium', 'Aglaonema', 'Begonia',
 ];
+const FAMILIES = CURATED_FAMILIES.filter(f => products.some(p => p.family === f));
+
+// Top-level category links also auto-hide when they have no products.
+const HAS_OUTDOOR = products.some(p => p.category === 'Outdoor');
+const HAS_POTS = products.some(p => p.tags.includes('pots'));
 
 export default function SiteHeader() {
   const { itemCount } = useCart();
@@ -52,6 +66,7 @@ export default function SiteHeader() {
         {!isMobile && (
           <nav className="flex items-center gap-1">
             {/* Indoor dropdown */}
+            {INDOOR_LINKS.length > 0 && (
             <div
               className="relative"
               onMouseEnter={() => setMega('indoor')}
@@ -83,8 +98,10 @@ export default function SiteHeader() {
                 </div>
               )}
             </div>
+            )}
 
             {/* Plant Families dropdown */}
+            {FAMILIES.length > 0 && (
             <div
               className="relative"
               onMouseEnter={() => setMega('families')}
@@ -119,6 +136,7 @@ export default function SiteHeader() {
                 </div>
               )}
             </div>
+            )}
 
             <Link
               href="/#wishes"
@@ -126,18 +144,22 @@ export default function SiteHeader() {
             >
               ✦ Bundles
             </Link>
-            <Link
-              href="/shop?category=Outdoor"
-              className="font-fraunces font-medium text-[15px] text-ink no-underline px-3.5 py-2.5 hover:bg-canvas-alt rounded-pill transition-colors"
-            >
-              Outdoor
-            </Link>
-            <Link
-              href="/shop?tag=pots"
-              className="font-fraunces font-medium text-[15px] text-ink no-underline px-3.5 py-2.5 hover:bg-canvas-alt rounded-pill transition-colors"
-            >
-              Pots
-            </Link>
+            {HAS_OUTDOOR && (
+              <Link
+                href="/shop?category=Outdoor"
+                className="font-fraunces font-medium text-[15px] text-ink no-underline px-3.5 py-2.5 hover:bg-canvas-alt rounded-pill transition-colors"
+              >
+                Outdoor
+              </Link>
+            )}
+            {HAS_POTS && (
+              <Link
+                href="/shop?tag=pots"
+                className="font-fraunces font-medium text-[15px] text-ink no-underline px-3.5 py-2.5 hover:bg-canvas-alt rounded-pill transition-colors"
+              >
+                Pots
+              </Link>
+            )}
           </nav>
         )}
 
@@ -218,8 +240,8 @@ export default function SiteHeader() {
             { label: 'Indoor', href: '/shop' },
             { label: 'Plant Families', href: '/shop' },
             { label: '✦ Bundles', href: '/#wishes', gold: true },
-            { label: 'Outdoor', href: '/shop?category=Outdoor' },
-            { label: 'Pots', href: '/shop?tag=pots' },
+            ...(HAS_OUTDOOR ? [{ label: 'Outdoor', href: '/shop?category=Outdoor' }] : []),
+            ...(HAS_POTS ? [{ label: 'Pots', href: '/shop?tag=pots' }] : []),
           ].map(l => (
             <Link
               key={l.label}

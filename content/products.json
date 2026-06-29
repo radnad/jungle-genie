@@ -10,7 +10,9 @@
     "priceEGP": 3500,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/8284916/pexels-photo-8284916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/8284916/pexels-photo-8284916.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/8284916/pexels-photo-8284916.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Huy Phan",
     "imageNote": "Rare cultivar. Pexels may return the plain Monstera deliciosa instead. Paste a specific URL here if you have a better photo.",
     "care": {
@@ -37,7 +39,9 @@
     "priceEGP": 2500,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/4870760/pexels-photo-4870760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/4870760/pexels-photo-4870760.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/4870760/pexels-photo-4870760.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "ROMAN ODINTSOV",
     "care": {
       "light": "Bright indirect",
@@ -63,7 +67,9 @@
     "priceEGP": 2500,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/12684656/pexels-photo-12684656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/12684656/pexels-photo-12684656.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/12684656/pexels-photo-12684656.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Zero Pamungkas",
     "care": {
       "light": "Bright indirect",
@@ -89,7 +95,9 @@
     "priceEGP": 3250,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/7494831/pexels-photo-7494831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/7494831/pexels-photo-7494831.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/7494831/pexels-photo-7494831.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Huy Phan",
     "care": {
       "light": "Bright indirect",
@@ -115,7 +123,9 @@
     "priceEGP": 1250,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/7602829/pexels-photo-7602829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/7602829/pexels-photo-7602829.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/7602829/pexels-photo-7602829.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Karolina Grabowska",
     "care": {
       "light": "Medium indirect",
@@ -141,7 +151,9 @@
     "priceEGP": 1600,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/9413775/pexels-photo-9413775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/9413775/pexels-photo-9413775.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/9413775/pexels-photo-9413775.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Huy Phan",
     "imageNote": "Rare cultivar. Paste a specific URL for best results - Pexels may return the wrong philodendron.",
     "care": {
@@ -168,7 +180,9 @@
     "priceEGP": 1750,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/5538833/pexels-photo-5538833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/5538833/pexels-photo-5538833.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/5538833/pexels-photo-5538833.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Ksenia Chernaya",
     "care": {
       "light": "Low to bright indirect",
@@ -195,7 +209,9 @@
     "priceEGP": 950,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/8857324/pexels-photo-8857324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/8857324/pexels-photo-8857324.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/8857324/pexels-photo-8857324.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Huy Phan",
     "care": {
       "light": "Bright indirect",
@@ -221,7 +237,9 @@
     "priceEGP": 900,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/9414333/pexels-photo-9414333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/9414333/pexels-photo-9414333.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/9414333/pexels-photo-9414333.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Huy Phan",
     "care": {
       "light": "Bright indirect",
@@ -247,7 +265,9 @@
     "priceEGP": 650,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/834657/pexels-photo-834657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/834657/pexels-photo-834657.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/834657/pexels-photo-834657.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Lisa",
     "care": {
       "light": "Bright indirect",
@@ -273,7 +293,9 @@
     "priceEGP": 700,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/9707245/pexels-photo-9707245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/9707245/pexels-photo-9707245.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/9707245/pexels-photo-9707245.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Huy Phan",
     "care": {
       "light": "Bright indirect",
@@ -298,7 +320,9 @@
     "priceEGP": 350,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/29118327/pexels-photo-29118327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/29118327/pexels-photo-29118327.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/29118327/pexels-photo-29118327.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Koushalya Karthikeyan",
     "care": {
       "light": "Low to bright indirect",
@@ -325,7 +349,9 @@
     "priceEGP": 450,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Ylanite Koppens",
     "care": {
       "light": "Low to bright indirect",
@@ -352,7 +378,9 @@
     "priceEGP": 350,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/3153522/pexels-photo-3153522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/3153522/pexels-photo-3153522.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/3153522/pexels-photo-3153522.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Pexels",
     "care": {
       "light": "Bright indirect",
@@ -378,7 +406,9 @@
     "priceEGP": 150,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/1634502/pexels-photo-1634502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/1634502/pexels-photo-1634502.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/1634502/pexels-photo-1634502.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Cyril Caiazzo",
     "care": {
       "light": "Full sun",
@@ -404,7 +434,9 @@
     "priceEGP": 1200,
     "salePriceEGP": 1500,
     "imageUrl": "https://images.pexels.com/photos/1382195/pexels-photo-1382195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/1382195/pexels-photo-1382195.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/1382195/pexels-photo-1382195.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Pexels",
     "care": {
       "light": "Bright indirect",
@@ -431,7 +463,9 @@
     "priceEGP": 350,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/5852477/pexels-photo-5852477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/5852477/pexels-photo-5852477.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/5852477/pexels-photo-5852477.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "cottonbro studio",
     "care": {
       "light": "Low to bright indirect",
@@ -457,7 +491,9 @@
     "priceEGP": 350,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/33964571/pexels-photo-33964571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/33964571/pexels-photo-33964571.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/33964571/pexels-photo-33964571.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Pexels",
     "care": {
       "light": "Low to medium indirect",
@@ -483,7 +519,9 @@
     "priceEGP": 250,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/11363534/pexels-photo-11363534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/11363534/pexels-photo-11363534.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/11363534/pexels-photo-11363534.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Mathias Reding",
     "care": {
       "light": "Bright indirect",
@@ -511,7 +549,9 @@
     "priceEGP": 450,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/8918503/pexels-photo-8918503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/8918503/pexels-photo-8918503.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/8918503/pexels-photo-8918503.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Pexels",
     "care": {
       "light": "Bright indirect",
@@ -538,7 +578,9 @@
     "priceEGP": 950,
     "salePriceEGP": null,
     "imageUrl": "https://images.pexels.com/photos/1831126/pexels-photo-1831126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "gallery": ["https://images.pexels.com/photos/1831126/pexels-photo-1831126.jpeg?auto=compress&cs=tinysrgb&w=400"],
+    "gallery": [
+      "https://images.pexels.com/photos/1831126/pexels-photo-1831126.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
     "photographer": "Lisa Fotios",
     "care": {
       "light": "Bright indirect",
@@ -553,5 +595,403 @@
     ],
     "isNewArrival": false,
     "description": "The classic split-leaf Monstera. Iconic, jungly, and an absolute joy to watch unfurl each new leaf."
+  },
+  {
+    "id": "calathea-orbifolia",
+    "name": "Calathea Orbifolia",
+    "slug": "calathea-orbifolia",
+    "family": "Calathea",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 550,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/20233791/pexels-photo-20233791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/20233791/pexels-photo-20233791.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Photo is a generic Calathea. Orbifolia has distinctive round silver-striped leaves. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Medium indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "calathea",
+      "pet-safe",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Wide, round leaves with silver and green pinstripes. A calm, leafy presence that is gentle on pets and easy on the eye."
+  },
+  {
+    "id": "calathea-medallion",
+    "name": "Calathea Medallion",
+    "slug": "calathea-medallion",
+    "family": "Calathea",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 400,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/9641446/pexels-photo-9641446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/9641446/pexels-photo-9641446.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Kulbir",
+    "care": {
+      "light": "Medium indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Small · 40cm"
+    },
+    "tags": [
+      "indoor",
+      "calathea",
+      "pet-safe",
+      "colorful",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Rounded leaves brushed with rose and deep green, purple underneath. The colour deepens in soft, even light."
+  },
+  {
+    "id": "calathea-lancifolia-rattlesnake",
+    "name": "Calathea Lancifolia",
+    "slug": "calathea-lancifolia-rattlesnake",
+    "family": "Calathea",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 400,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Photo is generic foliage. Rattlesnake Calathea has long wavy leaves with dark spots. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Medium indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "calathea",
+      "pet-safe",
+      "Draft price"
+    ],
+    "isNewArrival": false,
+    "description": "Long, wavy leaves marked like a rattlesnake, with wine-red undersides. Lively, sculptural, and safe for pets."
+  },
+  {
+    "id": "calathea-white-fusion",
+    "name": "Calathea White Fusion",
+    "slug": "calathea-white-fusion",
+    "family": "Calathea",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 750,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1382393/pexels-photo-1382393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1382393/pexels-photo-1382393.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Madison Inouye",
+    "imageNote": "Stand-in photo of similar white-green variegated foliage. White Fusion is a rare cultivar. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": true,
+      "size": "Small · 35cm"
+    },
+    "tags": [
+      "indoor",
+      "calathea",
+      "rare",
+      "pet-safe",
+      "collector",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Painterly white, green, and lilac variegation, no two leaves alike. A collector favourite that rewards steady humidity."
+  },
+  {
+    "id": "syngonium-pink",
+    "name": "Syngonium Pink",
+    "slug": "syngonium-pink",
+    "family": "Syngonium",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 300,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/6338/pexels-photo-6338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/6338/pexels-photo-6338.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Stand-in pink houseplant photo. Syngonium Pink has soft pink arrowhead leaves. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Medium to bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · trailing"
+    },
+    "tags": [
+      "indoor",
+      "syngonium",
+      "easy",
+      "hanging",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Soft pink arrowhead leaves on a fast, forgiving grower. Pinches back easily to stay full and bushy."
+  },
+  {
+    "id": "syngonium-albo-variegated",
+    "name": "Syngonium Albo Variegated",
+    "slug": "syngonium-albo-variegated",
+    "family": "Syngonium",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 850,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1084188/pexels-photo-1084188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1084188/pexels-photo-1084188.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Stand-in foliage photo. Albo Variegated has bold white splashes on green arrowheads. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · trailing"
+    },
+    "tags": [
+      "indoor",
+      "syngonium",
+      "rare",
+      "collector",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Crisp white variegation splashed across green arrowhead leaves. A striking, collectible take on an easy classic."
+  },
+  {
+    "id": "syngonium-neon-robusta",
+    "name": "Syngonium Neon Robusta",
+    "slug": "syngonium-neon-robusta",
+    "family": "Syngonium",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 300,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/2691363/pexels-photo-2691363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/2691363/pexels-photo-2691363.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Stand-in foliage photo. Neon Robusta has soft pink-green arrowhead leaves. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Medium to bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · trailing"
+    },
+    "tags": [
+      "indoor",
+      "syngonium",
+      "easy",
+      "hanging",
+      "Draft price"
+    ],
+    "isNewArrival": false,
+    "description": "Fresh minty pink leaves that lighten as they unfurl. One of the easiest trailing plants to keep happy."
+  },
+  {
+    "id": "aglaonema-red-valentine",
+    "name": "Aglaonema Red Valentine",
+    "slug": "aglaonema-red-valentine",
+    "family": "Aglaonema",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 450,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/2351676/pexels-photo-2351676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/2351676/pexels-photo-2351676.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Please confirm this reads as an Aglaonema. Red Valentine has pink and red marbled leaves. Paste a specific URL here if you have a better photo.",
+    "care": {
+      "light": "Low to medium indirect",
+      "water": "Every 10 days",
+      "petSafe": false,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "aglaonema",
+      "easy",
+      "low-light",
+      "colorful",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Rosy pink and red marbling across broad green leaves. Brings warm colour to lower-light corners with very little fuss."
+  },
+  {
+    "id": "aglaonema-silver-bay",
+    "name": "Aglaonema Silver Bay",
+    "slug": "aglaonema-silver-bay",
+    "family": "Aglaonema",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 400,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/9725293/pexels-photo-9725293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/9725293/pexels-photo-9725293.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "care": {
+      "light": "Low to medium indirect",
+      "water": "Every 10 days",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "aglaonema",
+      "easy",
+      "low-light",
+      "Draft price"
+    ],
+    "isNewArrival": false,
+    "description": "Silvery green leaves with deep green edges. A robust, low-light champion that asks for little and gives plenty."
+  },
+  {
+    "id": "aglaonema-pink-dalmatian",
+    "name": "Aglaonema Pink Dalmatian",
+    "slug": "aglaonema-pink-dalmatian",
+    "family": "Aglaonema",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 650,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/217763/pexels-photo-217763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/217763/pexels-photo-217763.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Stand-in pink-green foliage photo. Pink Dalmatian has pink speckles on green leaves. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Low to medium indirect",
+      "water": "Every 10 days",
+      "petSafe": false,
+      "size": "Medium · 50cm"
+    },
+    "tags": [
+      "indoor",
+      "aglaonema",
+      "colorful",
+      "low-light",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Green leaves freckled with bright pink, like spilled paint. A cheerful, easy-care pop of colour for shadier spots."
+  },
+  {
+    "id": "begonia-maculata-polka-dot",
+    "name": "Begonia Maculata",
+    "slug": "begonia-maculata-polka-dot",
+    "family": "Begonia",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 400,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/6072161/pexels-photo-6072161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/6072161/pexels-photo-6072161.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Eva Bronzini",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "begonia",
+      "statement",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "Olive wings dotted with silver polka dots, deep red beneath. Also known as the Polka Dot Begonia, and a true showpiece."
+  },
+  {
+    "id": "begonia-rex",
+    "name": "Begonia Rex",
+    "slug": "begonia-rex",
+    "family": "Begonia",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 400,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/6072088/pexels-photo-6072088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/6072088/pexels-photo-6072088.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Stand-in foliage photo. Rex Begonia has swirled silver, purple, and green leaves. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Medium to bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Small · 35cm"
+    },
+    "tags": [
+      "indoor",
+      "begonia",
+      "colorful",
+      "Draft price"
+    ],
+    "isNewArrival": false,
+    "description": "Swirls of silver, plum, and emerald with a metallic sheen. Grown purely for its dramatic, jewel-toned leaves."
+  },
+  {
+    "id": "begonia-maculata-variegated",
+    "name": "Begonia Maculata Variegated",
+    "slug": "begonia-maculata-variegated",
+    "family": "Begonia",
+    "category": "Indoor",
+    "subcategory": "Rare",
+    "priceEGP": 800,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/9414050/pexels-photo-9414050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/9414050/pexels-photo-9414050.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "imageNote": "Photo shows a standard Maculata. The variegated form adds cream marbling and is rarer. Paste a specific URL here for the best match.",
+    "care": {
+      "light": "Bright indirect",
+      "water": "Weekly",
+      "petSafe": false,
+      "size": "Medium · 60cm"
+    },
+    "tags": [
+      "indoor",
+      "begonia",
+      "rare",
+      "collector",
+      "Draft price"
+    ],
+    "isNewArrival": true,
+    "description": "The polka dot Begonia with an extra layer of cream variegation. Rare, delicate, and worth the patience it asks for."
   }
 ]
