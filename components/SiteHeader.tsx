@@ -1,13 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import BrandLogo from './BrandLogo';
 import InstagramIcon from './InstagramIcon';
+import PlantImage from './PlantImage';
 import { useCart } from '@/lib/cart-context';
 import { useWishlist } from '@/lib/wishlist-context';
 import productsData from '@/content/products.json';
 import site from '@/content/site.json';
+import { formatEGP } from '@/lib/format';
 import type { Product } from '@/lib/types';
 
 const products = productsData as unknown as Product[];
@@ -41,6 +43,9 @@ export default function SiteHeader() {
   const [mega, setMega] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 880);
@@ -48,6 +53,38 @@ export default function SiteHeader() {
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);
   }, []);
+
+  // Focus the search box when it opens, and close it on Escape.
+  useEffect(() => {
+    if (!searchOpen) return;
+    searchInputRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSearchOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [searchOpen]);
+
+  const closeSearch = () => {
+    setSearchOpen(false);
+    setQuery('');
+  };
+
+  // Case-insensitive, partial-match search over name, family, category,
+  // subcategory, and tags. Empty query shows nothing.
+  const results = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return products
+      .filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.family.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        (p.subcategory ?? '').toLowerCase().includes(q) ||
+        p.tags.some(t => t.toLowerCase().includes(q))
+      )
+      .slice(0, 8);
+  }, [query]);
 
   return (
     <header
@@ -58,17 +95,13 @@ export default function SiteHeader() {
         className="max-w-[1280px] mx-auto px-[5vw] flex items-center justify-between gap-5"
         style={{ height: '72px' }}
       >
-        {/* wordmark. The logo currently links to Instagram. To point it at the
-            homepage later, swap the <a> for <Link href="/"> and drop target/rel. */}
-        <a
-          href={site.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2.5 no-underline flex-shrink-0"
-        >
+        {/* wordmark. The logo links to the homepage. Instagram lives only in
+            its own "Follow us on Instagram" spots (the header IG icon, the
+            footer, and the homepage strip), never on the logo. */}
+        <Link href="/" className="flex items-center gap-2.5 no-underline flex-shrink-0">
           <BrandLogo height={40} className="rounded-md" />
           <span className="font-wonderia text-[25px] text-olive-deep leading-none">Jungle Genie</span>
-        </a>
+        </Link>
 
         {/* desktop nav */}
         {!isMobile && (
@@ -183,7 +216,9 @@ export default function SiteHeader() {
             <InstagramIcon size={20} color="#33401C" />
           </a>
           <button
-            aria-label="Search"
+            aria-label={searchOpen ? 'Close search' : 'Search'}
+            aria-expanded={searchOpen}
+            onClick={() => (searchOpen ? closeSearch() : setSearchOpen(true))}
             className="w-[42px] h-[42px] border-none bg-transparent rounded-full cursor-pointer flex items-center justify-center hover:bg-canvas-alt transition-colors"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -249,6 +284,77 @@ export default function SiteHeader() {
           )}
         </div>
       </div>
+
+      {/* search overlay - works from every page since the header is global */}
+      {searchOpen && (
+        <>
+          <div
+            className="fixed inset-0 z-40"
+            style={{ background: 'rgba(44,48,25,.28)' }}
+            onClick={closeSearch}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute left-0 right-0 top-full z-50 bg-cream border-t border-line"
+            style={{ boxShadow: '0 16px 40px rgba(51,64,28,.18)' }}
+          >
+            <div className="max-w-[1280px] mx-auto px-[5vw] py-4">
+              <div className="flex items-center gap-2.5 bg-white border border-line rounded-pill px-4 py-2.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
+                  <circle cx="11" cy="11" r="7" stroke="#5A6147" strokeWidth="1.7" />
+                  <path d="M16.5 16.5L21 21" stroke="#5A6147" strokeWidth="1.7" strokeLinecap="round" />
+                </svg>
+                <input
+                  ref={searchInputRef}
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  placeholder="Search plants by name, family, or type"
+                  className="flex-1 min-w-0 bg-transparent border-none outline-none font-fraunces text-[15px] text-ink placeholder:text-muted"
+                />
+                {query && (
+                  <button
+                    onClick={() => { setQuery(''); searchInputRef.current?.focus(); }}
+                    aria-label="Clear search"
+                    className="flex-shrink-0 text-muted hover:text-rose-clay text-[18px] leading-none bg-transparent border-none cursor-pointer"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+
+              {query.trim() && (
+                results.length > 0 ? (
+                  <div className="mt-3 flex flex-col gap-1">
+                    {results.map(p => (
+                      <Link
+                        key={p.id}
+                        href={`/shop/${p.slug}`}
+                        onClick={closeSearch}
+                        className="flex items-center gap-3 p-2 rounded-md no-underline hover:bg-canvas-alt transition-colors"
+                      >
+                        <div className="relative w-11 h-11 flex-shrink-0 rounded-md overflow-hidden bg-canvas-alt">
+                          <PlantImage src={p.imageUrl} alt={p.name} fill sizes="44px" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-wonderia text-[17px] text-olive-deep leading-tight truncate">{p.name}</div>
+                          <div className="text-[12px] text-muted truncate">{p.family} · {p.category}</div>
+                        </div>
+                        <div className="font-fraunces font-semibold text-[14px] text-ink font-lining flex-shrink-0">
+                          {formatEGP(p.salePriceEGP ?? p.priceEGP)} EGP
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="mt-4 mb-1 text-center text-muted text-[15px]">
+                    No plants match that wish. Try another name.
+                  </p>
+                )
+              )}
+            </div>
+          </div>
+        </>
+      )}
 
       {/* mobile drawer */}
       {isMobile && menuOpen && (

@@ -231,6 +231,43 @@ export default function HomePage() {
         </section>
 
         <LeafyDivider />
+
+        {/* OUR STORY */}
+        <section
+          className="px-[5vw] py-16"
+          style={{ background: 'linear-gradient(180deg, var(--cream), #FFF3D6)' }}
+        >
+          <div className="max-w-[720px] mx-auto">
+            <div className="text-center mb-6">
+              <p className="inline-flex items-center gap-2 font-fraunces font-semibold tracking-[.16em] uppercase text-[12px] text-marigold-deep m-0 mb-2">
+                <SparkleIcon />
+                From our windowsill to yours
+              </p>
+              <h2
+                className="font-wonderia font-normal m-0 text-olive-deep"
+                style={{ fontSize: 'clamp(34px,5vw,54px)' }}
+              >
+                Our Story
+              </h2>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <p className="text-ink text-[17px] leading-[1.75] m-0">
+                It started, like most good things do, with a single pot on a windowsill. Mohamed never set out to build a jungle. He just could not stop. One plant became ten, ten became a corner, and the corner quietly took over until a whole patch of green was thriving under his care.
+              </p>
+              <p className="text-ink text-[17px] leading-[1.75] m-0">
+                He fell for the tricky ones, the rare and the stubborn, the species most people are told not to bother with. He learned their moods, coaxed out new leaves, and watched them grow into something wild and beautiful. Soon there were tiny ecosystems on every shelf, little worlds of moss and root, and buds raised by hand and ready to find a home.
+              </p>
+              <p className="text-ink text-[17px] leading-[1.75] m-0">
+                Jungle Genie grew out of that love. What began as a hobby became a wish worth sharing: to put a little piece of that green magic in your hands, and to help it flourish wherever you are. Every plant we send carries a bit of that same care Mohamed gave the very first one.
+              </p>
+              <p className="text-center font-fraunces font-semibold text-[19px] text-olive-deep leading-[1.6] m-0 mt-2">
+                Welcome to the jungle. We are glad you wished your way here.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <SiteFooter />
       </main>
     </>
