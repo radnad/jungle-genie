@@ -55,7 +55,9 @@
       "collector"
     ],
     "isNewArrival": true,
-    "description": "Long, ruffled leaves with a velvet-like texture. A statement piece that rewards patience with ever bigger foliage."
+    "description": "Long, ruffled leaves with a velvet-like texture. A statement piece that rewards patience with ever bigger foliage.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "monstera-adansonii-variegated",
@@ -83,7 +85,9 @@
       "hanging"
     ],
     "isNewArrival": false,
-    "description": "Swiss-cheese leaves with creamy white splashes. Trails beautifully from a high shelf or hanging basket."
+    "description": "Swiss-cheese leaves with creamy white splashes. Trails beautifully from a high shelf or hanging basket.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "caramel-marble-philodendron",
@@ -111,7 +115,9 @@
       "collector"
     ],
     "isNewArrival": false,
-    "description": "Warm caramel and cream marbling on glossy leaves. Every new unfurl is a small event."
+    "description": "Warm caramel and cream marbling on glossy leaves. Every new unfurl is a small event.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "anthurium-clarinervium",
@@ -139,7 +145,9 @@
       "velvet"
     ],
     "isNewArrival": true,
-    "description": "Heart-shaped velvet leaves with silver veins that glow in soft light. Quiet drama at its finest."
+    "description": "Heart-shaped velvet leaves with silver veins that glow in soft light. Quiet drama at its finest.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "strawberry-shake-philodendron",
@@ -168,7 +176,9 @@
       "collector"
     ],
     "isNewArrival": false,
-    "description": "Pink, cream, and green variegation that looks like a painting. Each leaf is unique, none quite like the last."
+    "description": "Pink, cream, and green variegation that looks like a painting. Each leaf is unique, none quite like the last.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "rhapis-palm",
@@ -197,7 +207,9 @@
       "air-purifying"
     ],
     "isNewArrival": false,
-    "description": "Elegant fan-shaped fronds on slender canes. One of the best large indoor palms - tolerates low light and is safe for pets."
+    "description": "Elegant fan-shaped fronds on slender canes. One of the best large indoor palms - tolerates low light and is safe for pets.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "variegated-fiddle-leaf",
@@ -225,7 +237,9 @@
       "statement"
     ],
     "isNewArrival": false,
-    "description": "The iconic fiddle-leaf with creamy white variegation. A bold corner plant that commands the room."
+    "description": "The iconic fiddle-leaf with creamy white variegation. A bold corner plant that commands the room.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "alocasia-frydek-variegated",
@@ -253,7 +267,9 @@
       "velvet"
     ],
     "isNewArrival": false,
-    "description": "Velvety dark green leaves with white variegation and silver veins. A jewel of the Alocasia world."
+    "description": "Velvety dark green leaves with white variegation and silver veins. A jewel of the Alocasia world.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "persian-shield",
@@ -281,7 +297,9 @@
       "pet-safe"
     ],
     "isNewArrival": false,
-    "description": "Iridescent purple and silver foliage that shimmers in dappled light. Effortlessly theatrical outdoors."
+    "description": "Iridescent purple and silver foliage that shimmers in dappled light. Effortlessly theatrical outdoors.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "alocasia-low-rider",
@@ -308,7 +326,9 @@
       "compact"
     ],
     "isNewArrival": false,
-    "description": "A dwarf Alocasia that packs all the drama of its larger cousins into a compact, tabletop form."
+    "description": "A dwarf Alocasia that packs all the drama of its larger cousins into a compact, tabletop form.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "marble-queen-pothos",
@@ -337,7 +357,9 @@
       "low-light"
     ],
     "isNewArrival": false,
-    "description": "Cream and green marbled leaves on long, graceful vines. One of the most forgiving plants you can own."
+    "description": "Cream and green marbled leaves on long, graceful vines. One of the most forgiving plants you can own.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "snake-plant-zeylanica",
@@ -366,7 +388,9 @@
       "air-purifying"
     ],
     "isNewArrival": false,
-    "description": "Architectural upright leaves with silver-green banding. Thrives on neglect. Perfect for busy plant parents."
+    "description": "Architectural upright leaves with silver-green banding. Thrives on neglect. Perfect for busy plant parents.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "ficus-burgundy",
@@ -394,7 +418,9 @@
       "statement"
     ],
     "isNewArrival": false,
-    "description": "Deep burgundy leaves that deepen to near-black in bright light. A bold, moody statement plant."
+    "description": "Deep burgundy leaves that deepen to near-black in bright light. A bold, moody statement plant.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "aloe-vera",
@@ -422,7 +448,9 @@
       "succulent"
     ],
     "isNewArrival": false,
-    "description": "A household essential. Gel-packed leaves soothe minor burns, and it asks almost nothing in return."
+    "description": "A household essential. Gel-packed leaves soothe minor burns, and it asks almost nothing in return.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "bonsai-tree",
@@ -451,7 +479,9 @@
       "sale"
     ],
     "isNewArrival": true,
-    "description": "A living sculpture shaped over years. Each one is unique - patient art for the patient plant lover."
+    "description": "A living sculpture shaped over years. Each one is unique - patient art for the patient plant lover.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "zz-plant",
@@ -479,7 +509,9 @@
       "low-light"
     ],
     "isNewArrival": false,
-    "description": "Glossy, deep green oval leaves on graceful arching stems. Practically impossible to kill - water it when you remember."
+    "description": "Glossy, deep green oval leaves on graceful arching stems. Practically impossible to kill - water it when you remember.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "peace-lily",
@@ -507,7 +539,9 @@
       "flowering"
     ],
     "isNewArrival": false,
-    "description": "White sail-like blooms above glossy green leaves. One of the best plants for cleaner indoor air."
+    "description": "White sail-like blooms above glossy green leaves. One of the best plants for cleaner indoor air.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "spider-plant",
@@ -537,7 +571,9 @@
       "pet-safe"
     ],
     "isNewArrival": false,
-    "description": "Arching green and cream striped leaves with cascading plantlets. Cheerful, fast-growing, and safe for cats and dogs."
+    "description": "Arching green and cream striped leaves with cascading plantlets. Cheerful, fast-growing, and safe for cats and dogs.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "areca-palm",
@@ -566,7 +602,9 @@
       "pet-safe"
     ],
     "isNewArrival": false,
-    "description": "Feathery, tropical fronds that bring a holiday mood indoors. One of the top air-purifying palms, and pet-friendly."
+    "description": "Feathery, tropical fronds that bring a holiday mood indoors. One of the top air-purifying palms, and pet-friendly.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "monstera-deliciosa",
@@ -594,7 +632,9 @@
       "statement"
     ],
     "isNewArrival": false,
-    "description": "The classic split-leaf Monstera. Iconic, jungly, and an absolute joy to watch unfurl each new leaf."
+    "description": "The classic split-leaf Monstera. Iconic, jungly, and an absolute joy to watch unfurl each new leaf.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "calathea-orbifolia",
@@ -624,7 +664,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Wide, round leaves with silver and green pinstripes. A calm, leafy presence that is gentle on pets and easy on the eye."
+    "description": "Wide, round leaves with silver and green pinstripes. A calm, leafy presence that is gentle on pets and easy on the eye.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "calathea-medallion",
@@ -654,7 +696,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Rounded leaves brushed with rose and deep green, purple underneath. The colour deepens in soft, even light."
+    "description": "Rounded leaves brushed with rose and deep green, purple underneath. The colour deepens in soft, even light.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "calathea-lancifolia-rattlesnake",
@@ -684,7 +728,9 @@
       "Draft price"
     ],
     "isNewArrival": false,
-    "description": "Long, wavy leaves marked like a rattlesnake, with wine-red undersides. Lively, sculptural, and safe for pets."
+    "description": "Long, wavy leaves marked like a rattlesnake, with wine-red undersides. Lively, sculptural, and safe for pets.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "calathea-white-fusion",
@@ -716,7 +762,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Painterly white, green, and lilac variegation, no two leaves alike. A collector favourite that rewards steady humidity."
+    "description": "Painterly white, green, and lilac variegation, no two leaves alike. A collector favourite that rewards steady humidity.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "syngonium-pink",
@@ -747,7 +795,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Soft pink arrowhead leaves on a fast, forgiving grower. Pinches back easily to stay full and bushy."
+    "description": "Soft pink arrowhead leaves on a fast, forgiving grower. Pinches back easily to stay full and bushy.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "syngonium-albo-variegated",
@@ -778,7 +828,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Crisp white variegation splashed across green arrowhead leaves. A striking, collectible take on an easy classic."
+    "description": "Crisp white variegation splashed across green arrowhead leaves. A striking, collectible take on an easy classic.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "syngonium-neon-robusta",
@@ -809,7 +861,9 @@
       "Draft price"
     ],
     "isNewArrival": false,
-    "description": "Fresh minty pink leaves that lighten as they unfurl. One of the easiest trailing plants to keep happy."
+    "description": "Fresh minty pink leaves that lighten as they unfurl. One of the easiest trailing plants to keep happy.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "aglaonema-red-valentine",
@@ -841,7 +895,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Rosy pink and red marbling across broad green leaves. Brings warm colour to lower-light corners with very little fuss."
+    "description": "Rosy pink and red marbling across broad green leaves. Brings warm colour to lower-light corners with very little fuss.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "aglaonema-silver-bay",
@@ -871,7 +927,9 @@
       "Draft price"
     ],
     "isNewArrival": false,
-    "description": "Silvery green leaves with deep green edges. A robust, low-light champion that asks for little and gives plenty."
+    "description": "Silvery green leaves with deep green edges. A robust, low-light champion that asks for little and gives plenty.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "aglaonema-pink-dalmatian",
@@ -902,7 +960,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Green leaves freckled with bright pink, like spilled paint. A cheerful, easy-care pop of colour for shadier spots."
+    "description": "Green leaves freckled with bright pink, like spilled paint. A cheerful, easy-care pop of colour for shadier spots.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "begonia-maculata-polka-dot",
@@ -931,7 +991,9 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "Olive wings dotted with silver polka dots, deep red beneath. Also known as the Polka Dot Begonia, and a true showpiece."
+    "description": "Olive wings dotted with silver polka dots, deep red beneath. Also known as the Polka Dot Begonia, and a true showpiece.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "begonia-rex",
@@ -961,7 +1023,9 @@
       "Draft price"
     ],
     "isNewArrival": false,
-    "description": "Swirls of silver, plum, and emerald with a metallic sheen. Grown purely for its dramatic, jewel-toned leaves."
+    "description": "Swirls of silver, plum, and emerald with a metallic sheen. Grown purely for its dramatic, jewel-toned leaves.",
+    "department": "Plants",
+    "inStock": true
   },
   {
     "id": "begonia-maculata-variegated",
@@ -992,6 +1056,873 @@
       "Draft price"
     ],
     "isNewArrival": true,
-    "description": "The polka dot Begonia with an extra layer of cream variegation. Rare, delicate, and worth the patience it asks for."
+    "description": "The polka dot Begonia with an extra layer of cream variegation. Rare, delicate, and worth the patience it asks for.",
+    "department": "Plants",
+    "inStock": true
+  },
+  {
+    "id": "echeveria",
+    "name": "Echeveria",
+    "slug": "echeveria",
+    "family": "Succulent",
+    "department": "Succulents",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 180,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/11909756/pexels-photo-11909756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/11909756/pexels-photo-11909756.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "succulent",
+      "easy",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": true,
+    "description": "A rosette of blue-green leaves blushed with pink at the tips. Loves a sunny sill and asks for very little water.",
+    "care": {
+      "light": "Bright light to full sun",
+      "water": "Every 2 weeks",
+      "petSafe": true,
+      "size": "Small · 12cm"
+    }
+  },
+  {
+    "id": "haworthia",
+    "name": "Haworthia",
+    "slug": "haworthia",
+    "family": "Succulent",
+    "department": "Succulents",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 160,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/3014862/pexels-photo-3014862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/3014862/pexels-photo-3014862.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "succulent",
+      "easy",
+      "pet-safe",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "Neat little rosettes with pearly stripes. One of the toughest, most forgiving succulents you can keep indoors.",
+    "care": {
+      "light": "Bright light to full sun",
+      "water": "Every 2 weeks",
+      "petSafe": true,
+      "size": "Small · 10cm"
+    },
+    "imageNote": "Generic succulent photo. Haworthia has translucent striped leaves. Add your own photo for the best match."
+  },
+  {
+    "id": "jade-plant",
+    "name": "Jade Plant",
+    "slug": "jade-plant",
+    "family": "Succulent",
+    "department": "Succulents",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 220,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/9130764/pexels-photo-9130764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/9130764/pexels-photo-9130764.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "succulent",
+      "easy",
+      "lucky",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "The classic lucky plant, with plump jade-green leaves on woody stems. Grows slowly into a charming little tree.",
+    "care": {
+      "light": "Bright light to full sun",
+      "water": "Every 2 weeks",
+      "petSafe": true,
+      "size": "Medium · 25cm"
+    }
+  },
+  {
+    "id": "string-of-pearls",
+    "name": "String of Pearls",
+    "slug": "string-of-pearls",
+    "family": "Succulent",
+    "department": "Succulents",
+    "category": "Indoor",
+    "subcategory": null,
+    "priceEGP": 260,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/10701375/pexels-photo-10701375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/10701375/pexels-photo-10701375.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "succulent",
+      "hanging",
+      "Draft price"
+    ],
+    "inStock": false,
+    "isNewArrival": false,
+    "description": "Delicate strands of round, pea-like beads that spill beautifully over a shelf or hanging pot.",
+    "care": {
+      "light": "Bright light to full sun",
+      "water": "Every 2 weeks",
+      "petSafe": true,
+      "size": "Trailing · 30cm"
+    },
+    "imageNote": "Photo is a mixed succulent tray. String of Pearls trails round bead-like leaves. Add your own photo for the best match."
+  },
+  {
+    "id": "succulent-solo-pot",
+    "name": "Succulent Solo Pot",
+    "slug": "succulent-solo-pot",
+    "family": "Succulent",
+    "department": "Succulents",
+    "category": "Indoor",
+    "subcategory": "Solo pots",
+    "priceEGP": 120,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1903970/pexels-photo-1903970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1903970/pexels-photo-1903970.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "succulent",
+      "solo pot",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A single hand-picked succulent in a small pot. The easiest way to start, and a lovely little gift.",
+    "care": {
+      "light": "Bright light to full sun",
+      "water": "Every 2 weeks",
+      "petSafe": true,
+      "size": "Small · 8cm"
+    },
+    "imageNote": "Generic succulent photo. This is a single succulent in a small pot. Add your own photo for the best match."
+  },
+  {
+    "id": "mini-echeveria-solo-pot",
+    "name": "Mini Echeveria Solo Pot",
+    "slug": "mini-echeveria-solo-pot",
+    "family": "Succulent",
+    "department": "Succulents",
+    "category": "Indoor",
+    "subcategory": "Solo pots",
+    "priceEGP": 140,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1582463/pexels-photo-1582463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1582463/pexels-photo-1582463.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "succulent",
+      "solo pot",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "One perfect little Echeveria rosette in a small pot, ready to brighten a desk or windowsill.",
+    "care": {
+      "light": "Bright light to full sun",
+      "water": "Every 2 weeks",
+      "petSafe": true,
+      "size": "Small · 8cm"
+    }
+  },
+  {
+    "id": "hand-painted-terracotta-pot",
+    "name": "Hand Painted Terracotta Pot",
+    "slug": "hand-painted-terracotta-pot",
+    "family": "Pot",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Hand painted pots",
+    "priceEGP": 250,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/33926932/pexels-photo-33926932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/33926932/pexels-photo-33926932.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "handmade",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": true,
+    "description": "A terracotta pot painted by hand with warm, earthy patterns. Each one is a little different, just as it should be."
+  },
+  {
+    "id": "hand-painted-ceramic-pot",
+    "name": "Hand Painted Ceramic Pot",
+    "slug": "hand-painted-ceramic-pot",
+    "family": "Pot",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Hand painted pots",
+    "priceEGP": 320,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/2092553/pexels-photo-2092553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/2092553/pexels-photo-2092553.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "handmade",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A smooth ceramic pot finished with hand painted detail. A quiet, arty home for a favourite plant.",
+    "imageNote": "Photo shows a plain ceramic pot. Ours is hand painted. Add your own photo to show the real design."
+  },
+  {
+    "id": "hand-painted-pot-set",
+    "name": "Hand Painted Pot Set",
+    "slug": "hand-painted-pot-set",
+    "family": "Pot",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Hand painted pots",
+    "priceEGP": 500,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/33926935/pexels-photo-33926935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/33926935/pexels-photo-33926935.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "handmade",
+      "set",
+      "Draft price"
+    ],
+    "inStock": false,
+    "isNewArrival": false,
+    "description": "A set of three hand painted pots that sit beautifully together. A ready-made shelf in one buy.",
+    "imageNote": "Photo is a group of terracotta pots. This is a matched hand painted set. Add your own photo for the best match."
+  },
+  {
+    "id": "hand-painted-botanical-wall-art",
+    "name": "Hand Painted Botanical Wall Art",
+    "slug": "hand-painted-botanical-wall-art",
+    "family": "Wall art",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Wall decorations",
+    "priceEGP": 450,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/2320621/pexels-photo-2320621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/2320621/pexels-photo-2320621.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "handmade",
+      "wall",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A hand painted botanical piece to bring a little of the jungle onto your wall. Framed and ready to hang.",
+    "imageNote": "Placeholder framed art photo. Ours is hand painted botanical. Add your own photo for the best match."
+  },
+  {
+    "id": "leaf-wall-hanging",
+    "name": "Leaf Wall Hanging",
+    "slug": "leaf-wall-hanging",
+    "family": "Wall art",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Wall decorations",
+    "priceEGP": 380,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1226302/pexels-photo-1226302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1226302/pexels-photo-1226302.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "handmade",
+      "wall",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A soft, leafy wall hanging that adds texture and calm to any room. Handmade with care.",
+    "imageNote": "Placeholder leaf photo. This is a woven leaf wall hanging. Add your own photo for the best match."
+  },
+  {
+    "id": "hand-painted-wall-plaque",
+    "name": "Hand Painted Wall Plaque",
+    "slug": "hand-painted-wall-plaque",
+    "family": "Wall art",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Wall decorations",
+    "priceEGP": 300,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "handmade",
+      "wall",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A small hand painted plaque with a leafy motif. A sweet finishing touch for a gallery wall.",
+    "imageNote": "Placeholder foliage photo. This is a small hand painted plaque. Add your own photo for the best match."
+  },
+  {
+    "id": "botanical-throw-cushion",
+    "name": "Botanical Throw Cushion",
+    "slug": "botanical-throw-cushion",
+    "family": "Cushion",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Cushions",
+    "priceEGP": 280,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/13465905/pexels-photo-13465905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/13465905/pexels-photo-13465905.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "cushion",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A soft throw cushion in a leafy botanical print. The finishing touch for a cosy, plant-filled corner.",
+    "imageNote": "Generic cushion photo. Ours has a botanical print. Add your own photo for the best match."
+  },
+  {
+    "id": "leaf-print-cushion",
+    "name": "Leaf Print Cushion",
+    "slug": "leaf-print-cushion",
+    "family": "Cushion",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Cushions",
+    "priceEGP": 280,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/14959627/pexels-photo-14959627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/14959627/pexels-photo-14959627.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "cushion",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "Bold leaf print on a comfy, well-stuffed cushion. Brings the outdoors in, softly.",
+    "imageNote": "Generic cushion photo. Ours has a leaf print. Add your own photo for the best match."
+  },
+  {
+    "id": "scatter-cushion",
+    "name": "Scatter Cushion",
+    "slug": "scatter-cushion",
+    "family": "Cushion",
+    "department": "Decorations",
+    "category": "Decorations",
+    "subcategory": "Cushions",
+    "priceEGP": 250,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/5490292/pexels-photo-5490292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/5490292/pexels-photo-5490292.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "decor",
+      "cushion",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A small scatter cushion in warm, natural tones. Layer it in for extra comfort and colour.",
+    "imageNote": "Generic cushion photo. Add your own photo for the best match."
+  },
+  {
+    "id": "plain-terracotta-pot",
+    "name": "Plain Terracotta Pot",
+    "slug": "plain-terracotta-pot",
+    "family": "Pot",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Pots",
+    "priceEGP": 90,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/33926935/pexels-photo-33926935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/33926935/pexels-photo-33926935.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "pot",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A simple, breathable terracotta pot. The honest classic that almost every plant is happy in."
+  },
+  {
+    "id": "white-ceramic-pot",
+    "name": "White Ceramic Pot",
+    "slug": "white-ceramic-pot",
+    "family": "Pot",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Pots",
+    "priceEGP": 150,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/3747079/pexels-photo-3747079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/3747079/pexels-photo-3747079.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "pot",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A clean white ceramic pot that lets the plant do the talking. Suits any room and style."
+  },
+  {
+    "id": "nursery-pot-set",
+    "name": "Nursery Pot Set",
+    "slug": "nursery-pot-set",
+    "family": "Pot",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Pots",
+    "priceEGP": 120,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "pot",
+      "set",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A handy set of nursery pots for potting up, propagating, and growing on your new plants.",
+    "imageNote": "Placeholder pot photo. This is a set of plastic nursery pots. Add your own photo for the best match."
+  },
+  {
+    "id": "all-purpose-potting-mix",
+    "name": "All Purpose Potting Mix",
+    "slug": "all-purpose-potting-mix",
+    "family": "Soil",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Ready Soil Mix",
+    "priceEGP": 120,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/6231712/pexels-photo-6231712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/6231712/pexels-photo-6231712.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "soil",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A rich, ready-to-use mix that suits most houseplants. Just scoop, pot, and water.",
+    "imageNote": "Photo shows soil being mixed. Ours comes ready in a bag. Add your own photo for the best match."
+  },
+  {
+    "id": "cactus-succulent-mix",
+    "name": "Cactus and Succulent Mix",
+    "slug": "cactus-succulent-mix",
+    "family": "Soil",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Ready Soil Mix",
+    "priceEGP": 130,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/4750383/pexels-photo-4750383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/4750383/pexels-photo-4750383.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "soil",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A gritty, fast-draining blend made for succulents and cacti, so roots stay happy and never soggy.",
+    "imageNote": "Photo shows potting soil. Add your own photo for the best match."
+  },
+  {
+    "id": "premium-soil-mix",
+    "name": "Premium Soil Mix",
+    "slug": "premium-soil-mix",
+    "family": "Soil",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Ready Soil Mix",
+    "priceEGP": 180,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/5622462/pexels-photo-5622462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/5622462/pexels-photo-5622462.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "soil",
+      "Draft price"
+    ],
+    "inStock": false,
+    "isNewArrival": false,
+    "description": "Our richest blend, with added nutrients for hungry, fast-growing plants. A treat for your leafy ones.",
+    "imageNote": "Photo shows soil. Add your own photo for the best match."
+  },
+  {
+    "id": "garden-tool-set",
+    "name": "Garden Tool Set",
+    "slug": "garden-tool-set",
+    "family": "Tools",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Garden Tools",
+    "priceEGP": 350,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/4503269/pexels-photo-4503269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/4503269/pexels-photo-4503269.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "tools",
+      "set",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A tidy set of the essentials: trowel, fork, and more. Everything you need to pot and prune with ease."
+  },
+  {
+    "id": "trowel-and-gloves",
+    "name": "Trowel and Gloves",
+    "slug": "trowel-and-gloves",
+    "family": "Tools",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Garden Tools",
+    "priceEGP": 180,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/12110580/pexels-photo-12110580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/12110580/pexels-photo-12110580.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "tools",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A sturdy trowel and a comfy pair of gloves. The simple duo you will reach for again and again."
+  },
+  {
+    "id": "repotting-kit",
+    "name": "Repotting Kit",
+    "slug": "repotting-kit",
+    "family": "Tools",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Garden Tools",
+    "priceEGP": 220,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/3094208/pexels-photo-3094208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/3094208/pexels-photo-3094208.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "tools",
+      "kit",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A little kit to make repotting stress-free: scoop, mat, and hand tools tucked together.",
+    "imageNote": "Photo shows repotting in progress. Add your own photo for the best match."
+  },
+  {
+    "id": "all-purpose-fertilizer",
+    "name": "All Purpose Fertilizer",
+    "slug": "all-purpose-fertilizer",
+    "family": "Fertilizer",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Fertilizers",
+    "priceEGP": 140,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/5197443/pexels-photo-5197443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/5197443/pexels-photo-5197443.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "fertilizer",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A gentle, balanced feed for happy, leafy growth. A little goes a long way through the growing season.",
+    "imageNote": "Photo shows feeding plants. Add your own photo for the best match."
+  },
+  {
+    "id": "succulent-fertilizer",
+    "name": "Succulent Fertilizer",
+    "slug": "succulent-fertilizer",
+    "family": "Fertilizer",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Fertilizers",
+    "priceEGP": 130,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/6508835/pexels-photo-6508835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/6508835/pexels-photo-6508835.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "fertilizer",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A light feed made for succulents and cacti, to keep colours bright and rosettes tidy.",
+    "imageNote": "Placeholder gardening photo. This is succulent feed. Add your own photo for the best match."
+  },
+  {
+    "id": "liquid-plant-food",
+    "name": "Liquid Plant Food",
+    "slug": "liquid-plant-food",
+    "family": "Fertilizer",
+    "department": "Supplies",
+    "category": "Supplies",
+    "subcategory": "Fertilizers",
+    "priceEGP": 160,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/5622462/pexels-photo-5622462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/5622462/pexels-photo-5622462.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "supplies",
+      "fertilizer",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "An easy liquid food you mix into your watering can. Quick to use and loved by leafy plants.",
+    "imageNote": "Placeholder photo. This is a liquid plant food. Add your own photo for the best match."
+  },
+  {
+    "id": "wedding-bouquet",
+    "name": "Wedding Bouquet",
+    "slug": "wedding-bouquet",
+    "family": "Arrangement",
+    "department": "Arrangements",
+    "category": "Arrangements",
+    "subcategory": "Wedding gifts",
+    "priceEGP": 900,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/30325205/pexels-photo-30325205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/30325205/pexels-photo-30325205.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "arrangement",
+      "wedding",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": true,
+    "description": "An elegant hand-tied bouquet of fresh blooms and soft greenery, made to order for your special day."
+  },
+  {
+    "id": "bridal-centerpiece",
+    "name": "Bridal Centerpiece",
+    "slug": "bridal-centerpiece",
+    "family": "Arrangement",
+    "department": "Arrangements",
+    "category": "Arrangements",
+    "subcategory": "Wedding gifts",
+    "priceEGP": 1200,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/18088260/pexels-photo-18088260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/18088260/pexels-photo-18088260.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "arrangement",
+      "wedding",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A lush table centerpiece that turns any celebration into a garden. Arranged fresh, with love."
+  },
+  {
+    "id": "wedding-plant-gift-set",
+    "name": "Wedding Plant Gift Set",
+    "slug": "wedding-plant-gift-set",
+    "family": "Arrangement",
+    "department": "Arrangements",
+    "category": "Arrangements",
+    "subcategory": "Wedding gifts",
+    "priceEGP": 1500,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/5894075/pexels-photo-5894075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/5894075/pexels-photo-5894075.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "arrangement",
+      "wedding",
+      "gift",
+      "set",
+      "Draft price"
+    ],
+    "inStock": false,
+    "isNewArrival": false,
+    "description": "A curated set of plants and keepsakes, wrapped as a gift. A living memory that lasts far beyond the day.",
+    "imageNote": "Photo shows a florist at work. This is a curated plant gift set. Add your own photo for the best match."
+  },
+  {
+    "id": "seasonal-flower-arrangement",
+    "name": "Seasonal Flower Arrangement",
+    "slug": "seasonal-flower-arrangement",
+    "family": "Arrangement",
+    "department": "Arrangements",
+    "category": "Arrangements",
+    "subcategory": "Arrangements",
+    "priceEGP": 600,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/12272311/pexels-photo-12272311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/12272311/pexels-photo-12272311.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "arrangement",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A cheerful arrangement of whatever is freshest and most beautiful this season. Always a happy surprise."
+  },
+  {
+    "id": "succulent-arrangement",
+    "name": "Succulent Arrangement",
+    "slug": "succulent-arrangement",
+    "family": "Arrangement",
+    "department": "Arrangements",
+    "category": "Arrangements",
+    "subcategory": "Arrangements",
+    "priceEGP": 550,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/10701375/pexels-photo-10701375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/10701375/pexels-photo-10701375.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "arrangement",
+      "succulent",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A living arrangement of assorted succulents in one dish. Sculptural, long-lasting, and easy to love."
+  },
+  {
+    "id": "mixed-greenery-arrangement",
+    "name": "Mixed Greenery Arrangement",
+    "slug": "mixed-greenery-arrangement",
+    "family": "Arrangement",
+    "department": "Arrangements",
+    "category": "Arrangements",
+    "subcategory": "Arrangements",
+    "priceEGP": 700,
+    "salePriceEGP": null,
+    "imageUrl": "https://images.pexels.com/photos/5894075/pexels-photo-5894075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "gallery": [
+      "https://images.pexels.com/photos/5894075/pexels-photo-5894075.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ],
+    "photographer": "Pexels",
+    "tags": [
+      "arrangement",
+      "gift",
+      "Draft price"
+    ],
+    "inStock": true,
+    "isNewArrival": false,
+    "description": "A calm, all-green arrangement of leaves and foliage. Understated and endlessly elegant.",
+    "imageNote": "Placeholder florist photo. This is a mixed greenery arrangement. Add your own photo for the best match."
   }
 ]

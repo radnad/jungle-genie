@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   slug: string;
   family: string;
+  department?: string;
   category: string;
   subcategory?: string | null;
   priceEGP: number;
@@ -11,13 +12,14 @@ export interface Product {
   gallery?: string[];
   photographer?: string;
   imageNote?: string;
-  care: {
+  care?: {
     light: string;
     water: string;
     petSafe: boolean;
     size: string;
   };
   tags: string[];
+  inStock?: boolean;
   isNewArrival?: boolean;
   description?: string;
 }

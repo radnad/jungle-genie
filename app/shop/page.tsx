@@ -12,15 +12,22 @@ import { formatEGP } from '@/lib/format';
 const products = productsData as unknown as Product[];
 
 const MAX_PRICE = 3500;
-const MIN_PRICE = 150;
-
-const allFamilies = [...new Set(products.map(p => p.family))].sort();
+const MIN_PRICE = 90;
 
 type SortKey = 'featured' | 'price-asc' | 'price-desc' | 'name';
 
 const CHIP_FAMILIES = ['Monstera', 'Philodendron', 'Alocasia', 'Anthurium', 'Ficus', 'Pothos'];
 const SIZE_OPTS = ['Small', 'Medium', 'Large'];
 const ENV_OPTS = ['Indoor', 'Outdoor'];
+
+// Friendly titles per department, with a fallback.
+const DEPT_TITLES: Record<string, string> = {
+  Plants: 'The whole jungle',
+  Succulents: 'Sweet little succulents',
+  Decorations: 'Deck out your space',
+  Supplies: 'Everything they need',
+  Arrangements: 'Made to gift',
+};
 
 function Chip({ label, active, onToggle }: { label: string; active: boolean; onToggle: () => void }) {
   return (
@@ -73,102 +80,133 @@ function PillBtn({ label, active, onToggle }: { label: string; active: boolean; 
   );
 }
 
+function FilterTag({ label, onRemove }: { label: string; onRemove: () => void }) {
+  return (
+    <span
+      className="inline-flex items-center gap-1.5 font-fraunces font-semibold text-[12px] px-3 py-1 rounded-pill"
+      style={{ background: '#84994F', color: '#FBF7EA' }}
+    >
+      {label}
+      <button onClick={onRemove} className="hover:opacity-70 transition-opacity leading-none" aria-label="Remove filter">
+        x
+      </button>
+    </span>
+  );
+}
+
 function ShopContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
   const [sort, setSort] = useState<SortKey>('featured');
   const [selFamilies, setSelFamilies] = useState<string[]>([]);
+  const [selDepartment, setSelDepartment] = useState<string>('');
   const [selSubcategory, setSelSubcategory] = useState<string>('');
   const [selTag, setSelTag] = useState<string>('');
   const [selSize, setSelSize] = useState<string[]>([]);
   const [selEnv, setSelEnv] = useState<string[]>([]);
+  const [selStock, setSelStock] = useState<'' | 'in' | 'out'>('');
   const [maxPrice, setMaxPrice] = useState(MAX_PRICE);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
-  // Sync filter state from URL - runs on mount and whenever the URL changes (e.g. clicking a nav link)
+  // Sync filter state from the URL (runs on mount and whenever a nav link changes it).
   useEffect(() => {
     const familyParam = searchParams.get('family');
-    const categoryParam = searchParams.get('category');
-    const subcategoryParam = searchParams.get('subcategory');
-    const tagParam = searchParams.get('tag');
-
     setSelFamilies(familyParam ? familyParam.split(',').filter(Boolean) : []);
-    setSelEnv(categoryParam ? [categoryParam] : []);
-    setSelSubcategory(subcategoryParam || '');
-    setSelTag(tagParam || '');
+    setSelDepartment(searchParams.get('department') || '');
+    setSelEnv(searchParams.get('category') ? [searchParams.get('category')!] : []);
+    setSelSubcategory(searchParams.get('subcategory') || '');
+    setSelTag(searchParams.get('tag') || '');
+    const stock = searchParams.get('stock');
+    setSelStock(stock === 'in' || stock === 'out' ? stock : '');
   }, [searchParams]);
 
-  // Build and push a new URL from current filter state
-  const pushUrl = (
-    families: string[],
-    env: string[],
-    subcategory: string,
-    tag: string,
-  ) => {
+  // Build and push a URL from the current filter state (keeps filters shareable).
+  const pushUrl = (next: {
+    families?: string[]; department?: string; env?: string[];
+    subcategory?: string; tag?: string; stock?: '' | 'in' | 'out';
+  }) => {
+    const families = next.families ?? selFamilies;
+    const department = next.department ?? selDepartment;
+    const env = next.env ?? selEnv;
+    const subcategory = next.subcategory ?? selSubcategory;
+    const tag = next.tag ?? selTag;
+    const stock = next.stock ?? selStock;
     const p = new URLSearchParams();
+    if (department) p.set('department', department);
     if (families.length) p.set('family', families.join(','));
     if (env.length === 1) p.set('category', env[0]);
     if (subcategory) p.set('subcategory', subcategory);
     if (tag) p.set('tag', tag);
+    if (stock) p.set('stock', stock);
     const qs = p.toString();
     router.replace(qs ? `/shop?${qs}` : '/shop', { scroll: false });
   };
 
   const toggleFamily = (fam: string) => {
-    const next = selFamilies.includes(fam)
-      ? selFamilies.filter(f => f !== fam)
-      : [...selFamilies, fam];
-    setSelFamilies(next);
-    // Family selection clears subcategory/tag nav filters to avoid confusion
+    const nextFamilies = selFamilies.includes(fam) ? selFamilies.filter(f => f !== fam) : [...selFamilies, fam];
+    setSelFamilies(nextFamilies);
     setSelSubcategory('');
     setSelTag('');
-    pushUrl(next, selEnv, '', '');
+    pushUrl({ families: nextFamilies, subcategory: '', tag: '' });
   };
 
   const toggleEnv = (env: string) => {
     const next = selEnv.includes(env) ? selEnv.filter(e => e !== env) : [...selEnv, env];
     setSelEnv(next);
-    pushUrl(selFamilies, next, selSubcategory, selTag);
-  };
-
-  const removeSubcategory = () => {
-    setSelSubcategory('');
-    pushUrl(selFamilies, selEnv, '', selTag);
-  };
-
-  const removeTag = () => {
-    setSelTag('');
-    pushUrl(selFamilies, selEnv, selSubcategory, '');
+    pushUrl({ env: next });
   };
 
   const toggleSize = (size: string) => {
-    setSelSize(prev => prev.includes(size) ? prev.filter(s => s !== size) : [...prev, size]);
+    setSelSize(prev => (prev.includes(size) ? prev.filter(s => s !== size) : [...prev, size]));
+  };
+
+  const setStock = (val: '' | 'in' | 'out') => {
+    const next = selStock === val ? '' : val;
+    setSelStock(next);
+    pushUrl({ stock: next });
   };
 
   const clearAll = () => {
     setSelFamilies([]);
+    setSelDepartment('');
     setSelSubcategory('');
     setSelTag('');
     setSelSize([]);
     setSelEnv([]);
+    setSelStock('');
     setMaxPrice(MAX_PRICE);
     router.replace('/shop', { scroll: false });
   };
 
+  // Families shown in the sidebar depend on the active department so the list stays relevant.
+  const familiesInScope = useMemo(() => {
+    const scope = selDepartment
+      ? products.filter(p => p.department === selDepartment)
+      : products.filter(p => p.department === 'Plants' || p.department === 'Succulents');
+    return [...new Set(scope.map(p => p.family))].sort();
+  }, [selDepartment]);
+
   const famCounts = useMemo(() => {
     const c: Record<string, number> = {};
-    products.forEach(p => { c[p.family] = (c[p.family] || 0) + 1; });
+    products.forEach(p => {
+      c[p.family] = (c[p.family] || 0) + 1;
+    });
     return c;
   }, []);
 
+  const familyLabel = selDepartment && selDepartment !== 'Plants' && selDepartment !== 'Succulents' ? 'Type' : 'Plant family';
+
   const filtered = useMemo(() => {
     let list = products.filter(p => {
+      if (selDepartment && p.department !== selDepartment) return false;
       if (selFamilies.length && !selFamilies.includes(p.family)) return false;
       if (selEnv.length && !selEnv.includes(p.category)) return false;
       if (selSubcategory && p.subcategory !== selSubcategory) return false;
       if (selTag && !p.tags.includes(selTag)) return false;
-      if (selSize.length && !selSize.some(s => p.care.size.toLowerCase().startsWith(s.toLowerCase()))) return false;
+      if (selStock === 'in' && p.inStock === false) return false;
+      if (selStock === 'out' && p.inStock !== false) return false;
+      if (selSize.length && !selSize.some(s => p.care?.size?.toLowerCase().startsWith(s.toLowerCase()))) return false;
       if (p.priceEGP > maxPrice) return false;
       return true;
     });
@@ -178,9 +216,15 @@ function ShopContent() {
     else if (sort === 'name') list = [...list].sort((a, b) => a.name.localeCompare(b.name));
 
     return list;
-  }, [selFamilies, selEnv, selSubcategory, selTag, selSize, maxPrice, sort]);
+  }, [selDepartment, selFamilies, selEnv, selSubcategory, selTag, selStock, selSize, maxPrice, sort]);
 
-  const hasActiveFilters = selFamilies.length > 0 || selEnv.length > 0 || selSubcategory || selTag || selSize.length > 0 || maxPrice < MAX_PRICE;
+  const hasActiveFilters =
+    selFamilies.length > 0 || selDepartment || selEnv.length > 0 || selSubcategory ||
+    selTag || selStock || selSize.length > 0 || maxPrice < MAX_PRICE;
+
+  const heading = DEPT_TITLES[selDepartment] || 'The whole jungle';
+  const eyebrow = selDepartment || 'All products';
+  const showPlantChips = !selDepartment || selDepartment === 'Plants' || selDepartment === 'Succulents';
 
   return (
     <>
@@ -189,75 +233,29 @@ function ShopContent() {
 
         <section className="max-w-[1280px] mx-auto px-[5vw] pt-10 pb-2">
           <p className="font-fraunces font-semibold tracking-[.16em] uppercase text-[12px] text-marigold-deep m-0 mb-1.5">
-            All plants
+            {eyebrow}
           </p>
-          <h1
-            className="font-wonderia font-normal m-0 text-olive-deep"
-            style={{ fontSize: 'clamp(36px,5vw,60px)' }}
-          >
-            The whole jungle
+          <h1 className="font-wonderia font-normal m-0 text-olive-deep" style={{ fontSize: 'clamp(36px,5vw,60px)' }}>
+            {heading}
           </h1>
 
-          {/* family chips */}
-          <div className="flex gap-2.5 flex-wrap mt-5">
-            {CHIP_FAMILIES.map(f => (
-              <Chip
-                key={f}
-                label={f}
-                active={selFamilies.includes(f)}
-                onToggle={() => toggleFamily(f)}
-              />
-            ))}
-          </div>
+          {/* family chips (plants and succulents only) */}
+          {showPlantChips && (
+            <div className="flex gap-2.5 flex-wrap mt-5">
+              {CHIP_FAMILIES.map(f => (
+                <Chip key={f} label={f} active={selFamilies.includes(f)} onToggle={() => toggleFamily(f)} />
+              ))}
+            </div>
+          )}
 
-          {/* active nav-filter badges (subcategory or tag) */}
-          {(selSubcategory || selTag || (selEnv.length === 1)) && (
+          {/* active filter tags */}
+          {(selDepartment || selSubcategory || selTag || selEnv.length === 1 || selStock) && (
             <div className="flex items-center gap-2 mt-3 flex-wrap">
-              {selSubcategory && (
-                <span
-                  className="inline-flex items-center gap-1.5 font-fraunces font-semibold text-[12px] px-3 py-1 rounded-pill"
-                  style={{ background: '#84994F', color: '#FBF7EA' }}
-                >
-                  {selSubcategory}
-                  <button
-                    onClick={removeSubcategory}
-                    className="hover:opacity-70 transition-opacity leading-none"
-                    aria-label="Remove filter"
-                  >
-                    x
-                  </button>
-                </span>
-              )}
-              {selTag && (
-                <span
-                  className="inline-flex items-center gap-1.5 font-fraunces font-semibold text-[12px] px-3 py-1 rounded-pill"
-                  style={{ background: '#84994F', color: '#FBF7EA' }}
-                >
-                  {selTag}
-                  <button
-                    onClick={removeTag}
-                    className="hover:opacity-70 transition-opacity leading-none"
-                    aria-label="Remove filter"
-                  >
-                    x
-                  </button>
-                </span>
-              )}
-              {selEnv.length === 1 && (
-                <span
-                  className="inline-flex items-center gap-1.5 font-fraunces font-semibold text-[12px] px-3 py-1 rounded-pill"
-                  style={{ background: '#84994F', color: '#FBF7EA' }}
-                >
-                  {selEnv[0]}
-                  <button
-                    onClick={() => { setSelEnv([]); pushUrl(selFamilies, [], selSubcategory, selTag); }}
-                    className="hover:opacity-70 transition-opacity leading-none"
-                    aria-label="Remove filter"
-                  >
-                    x
-                  </button>
-                </span>
-              )}
+              {selDepartment && <FilterTag label={selDepartment} onRemove={() => { setSelDepartment(''); setSelSubcategory(''); pushUrl({ department: '', subcategory: '' }); }} />}
+              {selSubcategory && <FilterTag label={selSubcategory} onRemove={() => { setSelSubcategory(''); pushUrl({ subcategory: '' }); }} />}
+              {selTag && <FilterTag label={selTag} onRemove={() => { setSelTag(''); pushUrl({ tag: '' }); }} />}
+              {selEnv.length === 1 && <FilterTag label={selEnv[0]} onRemove={() => { setSelEnv([]); pushUrl({ env: [] }); }} />}
+              {selStock && <FilterTag label={selStock === 'in' ? 'In stock' : 'Out of stock'} onRemove={() => { setSelStock(''); pushUrl({ stock: '' }); }} />}
             </div>
           )}
         </section>
@@ -274,7 +272,7 @@ function ShopContent() {
               </svg>
               {filtersOpen ? 'Hide filters' : 'Filters'}
             </button>
-            <span className="text-muted text-sm font-lining">{filtered.length} plants</span>
+            <span className="text-muted text-sm font-lining">{filtered.length} items</span>
             {hasActiveFilters && (
               <button
                 onClick={clearAll}
@@ -310,38 +308,39 @@ function ShopContent() {
             >
               <div className="flex items-center justify-between mb-1.5">
                 <span className="font-wonderia text-[22px] text-olive-deep">Filters</span>
-                <button
-                  onClick={clearAll}
-                  className="font-fraunces text-[13px] bg-none border-none text-marigold-deep cursor-pointer underline"
-                >
+                <button onClick={clearAll} className="font-fraunces text-[13px] bg-none border-none text-marigold-deep cursor-pointer underline">
                   Clear
                 </button>
               </div>
 
-              <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-4 mb-2.5">Plant family</p>
-              {allFamilies.map(f => (
-                <CheckRow
-                  key={f}
-                  label={f}
-                  count={famCounts[f]}
-                  active={selFamilies.includes(f)}
-                  onToggle={() => toggleFamily(f)}
-                />
+              <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-4 mb-2.5">Availability</p>
+              <div className="flex gap-2 flex-wrap">
+                <PillBtn label="In stock" active={selStock === 'in'} onToggle={() => setStock('in')} />
+                <PillBtn label="Out of stock" active={selStock === 'out'} onToggle={() => setStock('out')} />
+              </div>
+
+              <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-5 mb-2.5">{familyLabel}</p>
+              {familiesInScope.map(f => (
+                <CheckRow key={f} label={f} count={famCounts[f]} active={selFamilies.includes(f)} onToggle={() => toggleFamily(f)} />
               ))}
 
-              <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-5 mb-2.5">Setting</p>
-              <div className="flex gap-2 flex-wrap">
-                {ENV_OPTS.map(v => (
-                  <PillBtn key={v} label={v} active={selEnv.includes(v)} onToggle={() => toggleEnv(v)} />
-                ))}
-              </div>
+              {showPlantChips && (
+                <>
+                  <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-5 mb-2.5">Setting</p>
+                  <div className="flex gap-2 flex-wrap">
+                    {ENV_OPTS.map(v => (
+                      <PillBtn key={v} label={v} active={selEnv.includes(v)} onToggle={() => toggleEnv(v)} />
+                    ))}
+                  </div>
 
-              <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-5 mb-2.5">Size</p>
-              <div className="flex gap-2 flex-wrap">
-                {SIZE_OPTS.map(v => (
-                  <PillBtn key={v} label={v} active={selSize.includes(v)} onToggle={() => toggleSize(v)} />
-                ))}
-              </div>
+                  <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-5 mb-2.5">Size</p>
+                  <div className="flex gap-2 flex-wrap">
+                    {SIZE_OPTS.map(v => (
+                      <PillBtn key={v} label={v} active={selSize.includes(v)} onToggle={() => toggleSize(v)} />
+                    ))}
+                  </div>
+                </>
+              )}
 
               <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[11px] text-muted mt-5 mb-2">Max price</p>
               <input
@@ -370,13 +369,13 @@ function ShopContent() {
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="mx-auto mb-3.5">
                   <path d="M12 21V9M12 9C12 5 9 3 5 3c0 4 3 6 7 6Zm0 0c0-4 3-6 7-6 0 4-3 6-7 6Z" stroke="#84994F" strokeWidth="1.4" strokeLinejoin="round" />
                 </svg>
-                <p className="font-wonderia text-[26px] text-olive-deep m-0 mb-1.5">No plants here yet</p>
+                <p className="font-wonderia text-[26px] text-olive-deep m-0 mb-1.5">Nothing here yet</p>
                 <p className="m-0 mb-4">Check back soon, or browse the full collection.</p>
                 <button
                   onClick={clearAll}
                   className="font-fraunces font-semibold text-sm border-[1.5px] border-marigold bg-transparent text-marigold-deep px-5 py-2.5 rounded-pill cursor-pointer hover:bg-marigold hover:text-olive-deep transition-colors"
                 >
-                  See all plants
+                  See everything
                 </button>
               </div>
             )}

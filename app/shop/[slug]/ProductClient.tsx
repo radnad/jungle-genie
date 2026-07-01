@@ -34,6 +34,7 @@ export default function ProductClient({
 
   const liked = has(product.id);
   const onSale = product.salePriceEGP != null;
+  const inStock = product.inStock !== false;
 
   const images = [
     product.imageUrl,
@@ -139,41 +140,55 @@ export default function ProductClient({
               </span>
             )}
             <span
-              className="font-fraunces font-semibold text-[12px] px-3 py-1 rounded-pill text-olive"
-              style={{ background: 'rgba(132,153,79,.12)' }}
+              className="font-fraunces font-semibold text-[12px] px-3 py-1 rounded-pill"
+              style={
+                inStock
+                  ? { background: 'rgba(132,153,79,.12)', color: '#84994F' }
+                  : { background: 'rgba(180,82,83,.12)', color: '#B45253' }
+              }
             >
-              In stock
+              {inStock ? 'In stock' : 'Out of stock'}
             </span>
           </div>
 
-          <CareBadge {...product.care} />
+          {product.care && <CareBadge {...product.care} />}
 
           {/* qty + add */}
           <div className="flex gap-3.5 flex-wrap items-center mt-6 mb-4">
-            <QtyStepper value={qty} onChange={setQty} />
-            <button
-              onClick={handleAdd}
-              className="flex-1 font-fraunces font-semibold text-base border-none rounded-pill cursor-pointer px-6 py-3.5 shadow-warm transition-all duration-150"
-              style={{
-                minWidth: '200px',
-                background: added ? '#FCB53B' : '#84994F',
-                color: added ? '#33401C' : '#FBF7EA',
-              }}
-              onMouseEnter={e => {
-                if (!added) {
-                  e.currentTarget.style.background = '#FCB53B';
-                  e.currentTarget.style.color = '#33401C';
-                }
-              }}
-              onMouseLeave={e => {
-                if (!added) {
-                  e.currentTarget.style.background = '#84994F';
-                  e.currentTarget.style.color = '#FBF7EA';
-                }
-              }}
-            >
-              {added ? 'Wish granted ✓' : 'Add to cart'}
-            </button>
+            {inStock && <QtyStepper value={qty} onChange={setQty} />}
+            {inStock ? (
+              <button
+                onClick={handleAdd}
+                className="flex-1 font-fraunces font-semibold text-base border-none rounded-pill cursor-pointer px-6 py-3.5 shadow-warm transition-all duration-150"
+                style={{
+                  minWidth: '200px',
+                  background: added ? '#FCB53B' : '#84994F',
+                  color: added ? '#33401C' : '#FBF7EA',
+                }}
+                onMouseEnter={e => {
+                  if (!added) {
+                    e.currentTarget.style.background = '#FCB53B';
+                    e.currentTarget.style.color = '#33401C';
+                  }
+                }}
+                onMouseLeave={e => {
+                  if (!added) {
+                    e.currentTarget.style.background = '#84994F';
+                    e.currentTarget.style.color = '#FBF7EA';
+                  }
+                }}
+              >
+                {added ? 'Wish granted ✓' : 'Add to cart'}
+              </button>
+            ) : (
+              <button
+                disabled
+                className="flex-1 font-fraunces font-semibold text-base border-none rounded-pill px-6 py-3.5"
+                style={{ minWidth: '200px', background: '#E7DFC8', color: '#5A6147', cursor: 'not-allowed' }}
+              >
+                Out of stock
+              </button>
+            )}
           </div>
 
           <div className="flex items-center gap-4">
@@ -240,37 +255,39 @@ export default function ProductClient({
       )}
 
       {/* care notes */}
-      <section className="max-w-[1280px] mx-auto px-[5vw] pt-6 pb-4">
-        <h2
-          className="font-wonderia font-normal m-0 mb-4 text-olive-deep"
-          style={{ fontSize: 'clamp(26px,3.5vw,38px)' }}
-        >
-          Care notes
-        </h2>
-        <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))' }}>
-          {[
-            {
-              label: 'Light',
-              body: `Provide ${product.care.light} light. Avoid harsh midday sun on delicate foliage.`,
-            },
-            {
-              label: 'Water',
-              body: `Water ${product.care.water}. Let the top inch of soil dry before watering - roots dislike sitting wet.`,
-            },
-            {
-              label: 'A little extra',
-              body: product.care.petSafe
-                ? 'Safe for cats and dogs. Still best to keep out of reach - no plant likes being chewed!'
-                : 'Keep away from pets and small children. Wash hands after handling.',
-            },
-          ].map(note => (
-            <div key={note.label} className="bg-white border border-line rounded-md p-5">
-              <p className="font-fraunces font-semibold text-marigold-deep m-0 mb-2">{note.label}</p>
-              <p className="m-0 text-[15px] leading-relaxed text-ink">{note.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {product.care && (
+        <section className="max-w-[1280px] mx-auto px-[5vw] pt-6 pb-4">
+          <h2
+            className="font-wonderia font-normal m-0 mb-4 text-olive-deep"
+            style={{ fontSize: 'clamp(26px,3.5vw,38px)' }}
+          >
+            Care notes
+          </h2>
+          <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))' }}>
+            {[
+              {
+                label: 'Light',
+                body: `Provide ${product.care.light} light. Avoid harsh midday sun on delicate foliage.`,
+              },
+              {
+                label: 'Water',
+                body: `Water ${product.care.water}. Let the top inch of soil dry before watering - roots dislike sitting wet.`,
+              },
+              {
+                label: 'A little extra',
+                body: product.care.petSafe
+                  ? 'Safe for cats and dogs. Still best to keep out of reach - no plant likes being chewed!'
+                  : 'Keep away from pets and small children. Wash hands after handling.',
+              },
+            ].map(note => (
+              <div key={note.label} className="bg-white border border-line rounded-md p-5">
+                <p className="font-fraunces font-semibold text-marigold-deep m-0 mb-2">{note.label}</p>
+                <p className="m-0 text-[15px] leading-relaxed text-ink">{note.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* related */}
       {relatedProducts.length > 0 && (

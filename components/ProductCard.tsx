@@ -19,9 +19,11 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const liked = has(product.id);
   const onSale = product.salePriceEGP != null;
+  const inStock = product.inStock !== false;
 
   const handleAdd = (e: React.MouseEvent) => {
     e.preventDefault();
+    if (!inStock) return;
     addItem({
       id: product.id,
       slug: product.slug,
@@ -53,10 +55,19 @@ export default function ProductCard({ product }: ProductCardProps) {
             />
           </div>
 
-          {onSale && (
-            <span className="absolute top-3 left-3 font-fraunces font-semibold text-xs bg-rose-clay text-cream px-3 py-1.5 rounded-pill">
-              Sale
+          {!inStock ? (
+            <span
+              className="absolute top-3 left-3 font-fraunces font-semibold text-xs px-3 py-1.5 rounded-pill"
+              style={{ background: '#5A6147', color: '#FBF7EA' }}
+            >
+              Out of stock
             </span>
+          ) : (
+            onSale && (
+              <span className="absolute top-3 left-3 font-fraunces font-semibold text-xs bg-rose-clay text-cream px-3 py-1.5 rounded-pill">
+                Sale
+              </span>
+            )
           )}
 
           <button
@@ -119,28 +130,39 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
-          <button
-            onClick={handleAdd}
-            className="mt-1.5 font-fraunces font-semibold text-sm border-none rounded-pill cursor-pointer w-full py-3 px-4 transition-all duration-150"
-            style={{
-              background: added ? '#FCB53B' : '#84994F',
-              color: added ? '#33401C' : '#FBF7EA',
-            }}
-            onMouseEnter={e => {
-              if (!added) {
-                e.currentTarget.style.background = '#FCB53B';
-                e.currentTarget.style.color = '#33401C';
-              }
-            }}
-            onMouseLeave={e => {
-              if (!added) {
-                e.currentTarget.style.background = '#84994F';
-                e.currentTarget.style.color = '#FBF7EA';
-              }
-            }}
-          >
-            {added ? 'Wish granted ✓' : 'Add to cart'}
-          </button>
+          {inStock ? (
+            <button
+              onClick={handleAdd}
+              className="mt-1.5 font-fraunces font-semibold text-sm border-none rounded-pill cursor-pointer w-full py-3 px-4 transition-all duration-150"
+              style={{
+                background: added ? '#FCB53B' : '#84994F',
+                color: added ? '#33401C' : '#FBF7EA',
+              }}
+              onMouseEnter={e => {
+                if (!added) {
+                  e.currentTarget.style.background = '#FCB53B';
+                  e.currentTarget.style.color = '#33401C';
+                }
+              }}
+              onMouseLeave={e => {
+                if (!added) {
+                  e.currentTarget.style.background = '#84994F';
+                  e.currentTarget.style.color = '#FBF7EA';
+                }
+              }}
+            >
+              {added ? 'Wish granted ✓' : 'Add to cart'}
+            </button>
+          ) : (
+            <button
+              onClick={e => e.preventDefault()}
+              disabled
+              className="mt-1.5 font-fraunces font-semibold text-sm border-none rounded-pill w-full py-3 px-4"
+              style={{ background: '#E7DFC8', color: '#5A6147', cursor: 'not-allowed' }}
+            >
+              Out of stock
+            </button>
+          )}
         </div>
       </div>
     </Link>

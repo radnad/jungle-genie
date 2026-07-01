@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import BrandLogo from './BrandLogo';
 import InstagramIcon from './InstagramIcon';
+import { contactHref } from './SiteHeader';
 import site from '@/content/site.json';
 import productsData from '@/content/products.json';
 import type { Product } from '@/lib/types';
@@ -116,10 +117,11 @@ export default function SiteFooter() {
               Shop
             </p>
             {[
-              { label: 'Indoor plants', href: '/shop' },
-              { label: 'Rare & collectible', href: '/shop?subcategory=Rare' },
-              { label: '✦ 3 Wishes bundles', href: '/#wishes' },
-              { label: 'Pet-safe plants', href: '/shop?tag=pet-safe' },
+              { label: 'All plants', href: '/shop?department=Plants' },
+              { label: 'Succulents', href: '/shop?department=Succulents' },
+              { label: 'Decorations', href: '/shop?department=Decorations' },
+              { label: 'Supplies', href: '/shop?department=Supplies' },
+              { label: '✦ 3 Wishes bundles', href: '/bundles' },
             ].map(l => (
               <Link
                 key={l.label}
@@ -135,8 +137,20 @@ export default function SiteFooter() {
           {/* care links */}
           <div>
             <p className="font-fraunces font-semibold tracking-[.1em] uppercase text-[12px] text-marigold m-0 mb-3.5">
-              Care and delivery
+              Help and contact
             </p>
+            <a
+              href={contactHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-cream no-underline text-[15px] py-1 hover:text-butter transition-colors font-semibold"
+              style={{ opacity: 0.95 }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3Z" stroke="#FCB53B" strokeWidth="1.6" strokeLinejoin="round" />
+              </svg>
+              Contact us on WhatsApp
+            </a>
             {[
               'Plant care guides',
               'Delivery and timing',

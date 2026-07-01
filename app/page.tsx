@@ -25,55 +25,18 @@ function getPlants(bundle: WishBundle): [Product | undefined, Product | undefine
 const newArrivals = products.filter(p => p.isNewArrival).slice(0, 4);
 const featuredBundles = bundles.slice(0, 3);
 
+const leafIcon = (stroke: string) => (
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.5 }}>
+    <path d="M12 21V9M12 9C12 5 9 3 5 3c0 4 3 6 7 6Zm0 0c0-4 3-6 7-6 0 4-3 6-7 6Z" stroke={stroke} strokeWidth="1.4" strokeLinejoin="round" />
+  </svg>
+);
+
 const CATEGORIES = [
-  {
-    label: 'Indoor',
-    sub: 'Leafy companions for every room',
-    href: '/shop',
-    bg: '#84994F',
-    fg: '#FBF7EA',
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.5 }}>
-        <path d="M12 21V9M12 9C12 5 9 3 5 3c0 4 3 6 7 6Zm0 0c0-4 3-6 7-6 0 4-3 6-7 6Z" stroke="#FBF7EA" strokeWidth="1.4" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Rare finds',
-    sub: 'For the collector’s shelf',
-    href: '/shop?subcategory=Rare',
-    bg: '#B45253',
-    fg: '#FBF7EA',
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.5 }}>
-        <path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 16l-5 2.6 1-5.5-4-3.9 5.5-.8z" stroke="#FBF7EA" strokeWidth="1.3" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Low-light',
-    sub: 'Thrive in dim corners',
-    href: '/shop?tag=low-light',
-    bg: '#F2ECD9',
-    fg: '#33401C',
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.4 }}>
-        <path d="M5 21c0-6 3-9 7-9M19 21c0-6-3-9-7-9m0 0V4" stroke="#33401C" strokeWidth="1.4" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Pet-friendly',
-    sub: 'Safe for cats and dogs',
-    href: '/shop?tag=pet-safe',
-    bg: '#33401C',
-    fg: '#FBF7EA',
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style={{ position: 'absolute', top: 18, right: 18, opacity: 0.5 }}>
-        <path d="M12 21c-5-3-8-6-8-10a4 4 0 017-2 4 4 0 017 2c0 4-3 7-8 10Z" stroke="#FCB53B" strokeWidth="1.3" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
+  { label: 'Plants', sub: 'Leafy companions for every room', href: '/shop?department=Plants', bg: '#84994F', fg: '#FBF7EA', icon: leafIcon('#FBF7EA') },
+  { label: 'Succulents', sub: 'Easy, sculptural, sun-loving', href: '/shop?department=Succulents', bg: '#B45253', fg: '#FBF7EA', icon: leafIcon('#FBF7EA') },
+  { label: 'Decorations', sub: 'Hand painted pots and cosy touches', href: '/shop?department=Decorations', bg: '#FCB53B', fg: '#33401C', icon: leafIcon('#33401C') },
+  { label: 'Supplies', sub: 'Pots, soil, tools, and feed', href: '/shop?department=Supplies', bg: '#33401C', fg: '#FBF7EA', icon: leafIcon('#FCB53B') },
+  { label: 'Arrangements', sub: 'Made to gift and celebrate', href: '/shop?department=Arrangements', bg: '#F2ECD9', fg: '#33401C', icon: leafIcon('#33401C') },
 ];
 
 export default function HomePage() {
@@ -153,18 +116,32 @@ export default function HomePage() {
 
         {/* CATEGORY TILES */}
         <section className="max-w-[1280px] mx-auto px-[5vw] py-9">
+          <div className="mb-6">
+            <p className="font-fraunces font-semibold tracking-[.16em] uppercase text-[12px] text-marigold-deep m-0 mb-1.5">
+              Explore the shop
+            </p>
+            <h2 className="font-wonderia font-normal m-0 text-olive-deep" style={{ fontSize: 'clamp(28px,4vw,44px)' }}>
+              Shop by category
+            </h2>
+          </div>
           <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(190px,1fr))' }}>
             {CATEGORIES.map(cat => (
               <Link
                 key={cat.label}
                 href={cat.href}
                 className="relative overflow-hidden rounded-lg no-underline flex flex-col justify-end p-6 shadow-warm transition-transform duration-200 hover:-translate-y-1"
-                style={{ background: cat.bg, color: cat.fg, minHeight: '150px' }}
+                style={{ background: cat.bg, color: cat.fg, minHeight: '160px' }}
               >
                 {cat.icon}
                 <span className="font-wonderia text-[26px] leading-none">{cat.label}</span>
-                <span className="text-[13px] mt-1" style={{ opacity: cat.bg === '#F2ECD9' ? 0.75 : 0.85 }}>
+                <span className="text-[13px] mt-1 mb-3" style={{ opacity: cat.fg === '#33401C' ? 0.78 : 0.85 }}>
                   {cat.sub}
+                </span>
+                <span
+                  className="self-start font-fraunces font-semibold text-[13px] px-3.5 py-1.5 rounded-pill"
+                  style={{ background: cat.fg === '#33401C' ? 'rgba(51,64,28,.12)' : 'rgba(251,247,234,.2)', color: cat.fg }}
+                >
+                  Shop {cat.label} →
                 </span>
               </Link>
             ))}
@@ -197,6 +174,18 @@ export default function HomePage() {
               {featuredBundles.map(bundle => (
                 <WishBundleCard key={bundle.id} bundle={bundle} plants={getPlants(bundle)} />
               ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-muted text-[16px] m-0 mb-3">Want to choose your own trio?</p>
+              <Link
+                href="/bundles#build"
+                className="inline-flex items-center gap-2 font-fraunces font-semibold text-base no-underline rounded-pill px-7 py-3.5 shadow-warm transition-all duration-150 text-cream"
+                style={{ background: '#33401C' }}
+              >
+                <SparkleIcon size={16} color="#FCB53B" />
+                Create your own 3 Wishes
+              </Link>
             </div>
           </div>
         </section>

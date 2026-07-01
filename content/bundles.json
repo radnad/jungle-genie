@@ -43,5 +43,27 @@
     "savePercent": 12,
     "saveText": "Save 12%",
     "description": "Three of the most sought-after collector plants, united. For those whose jungle must be extraordinary."
+  },
+  {
+    "id": "sunny-sill-wish",
+    "name": "Sunny Sill Wish",
+    "slug": "sunny-sill-wish",
+    "wishLabel": "Succulent Trio",
+    "plantIds": ["echeveria", "jade-plant", "haworthia"],
+    "bundlePriceEGP": 500,
+    "savePercent": 11,
+    "saveText": "Save 60",
+    "description": "Three easy little succulents for a bright windowsill. Sweet, sculptural, and almost impossible to fuss over."
+  },
+  {
+    "id": "gifters-wish",
+    "name": "Gifter's Wish",
+    "slug": "gifters-wish",
+    "wishLabel": "Ready to Gift",
+    "plantIds": ["succulent-solo-pot", "hand-painted-terracotta-pot", "all-purpose-potting-mix"],
+    "bundlePriceEGP": 450,
+    "savePercent": 8,
+    "saveText": "Save 40",
+    "description": "A little succulent, a hand painted pot, and a bag of good soil. Everything for a thoughtful, ready-to-give gift."
   }
 ]

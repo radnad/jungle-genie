@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return { title: 'Not found' };
   return {
     title: `${product.name} - Jungle Genie`,
-    description: product.description || `${product.name} - ${product.family}. ${product.care.light} light.`,
+    description: product.description || `${product.name} - ${product.family}.`,
   };
 }
 

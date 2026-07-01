@@ -20,9 +20,10 @@
     "note": "Online only - no physical store, no pickup"
   },
   "orders": {
-    "_comment": "Where new orders are sent. whatsappNumber is digits only, no plus sign or spaces. orderEmail receives a copy when the customer taps Email instead.",
-    "whatsappNumber": "201099898787",
+    "_comment": "Orders are emailed to the owner automatically through Web3Forms. Paste your free Web3Forms access key below (get one at web3forms.com using junglegenieeg@gmail.com). whatsappNumber is used only for the Contact us link, never for orders.",
+    "web3formsAccessKey": "",
     "orderEmail": "junglegenieeg@gmail.com",
+    "whatsappNumber": "201099898787",
     "deliveryFeeEGP": 75,
     "freeDeliveryThresholdEGP": 1000
   },
