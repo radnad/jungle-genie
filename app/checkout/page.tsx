@@ -23,6 +23,7 @@ const GOVERNORATES = [
 interface Fields {
   name: string;
   phone: string;
+  email: string;
   address: string;
   governorate: string;
   notes: string;
@@ -31,7 +32,7 @@ interface Fields {
 export default function CheckoutPage() {
   const { items, subtotal, clearCart } = useCart();
 
-  const [fields, setFields] = useState<Fields>({ name: '', phone: '', address: '', governorate: '', notes: '' });
+  const [fields, setFields] = useState<Fields>({ name: '', phone: '', email: '', address: '', governorate: '', notes: '' });
   const [errors, setErrors] = useState<Partial<Fields>>({});
   const [submitting, setSubmitting] = useState(false);
   const [placed, setPlaced] = useState<null | { ref: string; orderText: string; name: string }>(null);
@@ -49,6 +50,7 @@ export default function CheckoutPage() {
     const e: Partial<Fields> = {};
     if (!fields.name.trim()) e.name = 'Please add your name';
     if (fields.phone.replace(/\D/g, '').length < 8) e.phone = 'Please add a valid phone number';
+    if (!/\S+@\S+\.\S+/.test(fields.email.trim())) e.email = 'Please add a valid email so we can send your confirmation';
     if (!fields.address.trim()) e.address = 'Please add your address';
     if (!fields.governorate) e.governorate = 'Please choose your governorate';
     setErrors(e);
@@ -79,6 +81,34 @@ export default function CheckoutPage() {
     ].join('\n');
   };
 
+  // Warm, on-brand body for the customer's own confirmation email.
+  const buildCustomerEmail = (): string => {
+    const lines = items.map(i => `- ${i.quantity}x ${i.name} = ${formatEGP(i.priceEGP * i.quantity)} EGP`);
+    return [
+      `Hi ${fields.name.split(' ')[0]},`,
+      '',
+      'Your wish has been granted. Thank you for your order with Jungle Genie.',
+      '',
+      'We have received it and Mohamed and the team are getting your green friends ready. You will hear from us soon to arrange delivery across Egypt. Payment is Cash on Delivery.',
+      '',
+      'Here is what you wished for:',
+      ...lines,
+      `Total: ${formatEGP(total)} EGP`,
+      '',
+      'Delivering to:',
+      fields.name,
+      fields.phone,
+      fields.address,
+      fields.governorate,
+      '',
+      'Questions? Message us any time on WhatsApp or Instagram @junglegenieeg.',
+      '',
+      'With love and leaves,',
+      'Jungle Genie',
+      'Nurturing Nature',
+    ].join('\n');
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate() || submitting) return;
@@ -106,9 +136,11 @@ export default function CheckoutPage() {
             access_key: key,
             subject: `New Jungle Genie order ${ref}`,
             from_name: 'Jungle Genie Shop',
+            replyto: fields.email,
             Reference: ref,
             Name: fields.name,
             Phone: fields.phone,
+            Email: fields.email,
             Governorate: fields.governorate,
             Address: fields.address,
             Notes: fields.notes.trim() || 'none',
@@ -119,6 +151,31 @@ export default function CheckoutPage() {
         });
       } catch {
         // Order is still saved locally; do not block the customer.
+      }
+    }
+
+    // Send the customer their own branded confirmation email via EmailJS.
+    // If EmailJS is not configured yet, this is skipped and nothing breaks.
+    const ej = site.orders.emailjs;
+    if (ej.serviceId && ej.templateId && ej.publicKey) {
+      try {
+        await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            service_id: ej.serviceId,
+            template_id: ej.templateId,
+            user_id: ej.publicKey,
+            template_params: {
+              to_email: fields.email,
+              subject: 'Your wish has been granted 🌿 Jungle Genie',
+              name: fields.name.split(' ')[0],
+              message: buildCustomerEmail(),
+            },
+          }),
+        });
+      } catch {
+        // The on-site confirmation still shows; do not block the customer.
       }
     }
 
@@ -219,6 +276,11 @@ export default function CheckoutPage() {
                   <label className="block text-[13px] font-semibold text-olive-deep mb-1.5">Phone number</label>
                   <input className={inputCls} style={{ borderColor: errors.phone ? '#B45253' : '#E7DFC8' }} value={fields.phone} onChange={e => set('phone', e.target.value)} placeholder="01x xxxx xxxx" inputMode="tel" />
                   {errors.phone && <p className="text-rose-clay text-[12px] m-0 mt-1">{errors.phone}</p>}
+                </div>
+                <div>
+                  <label className="block text-[13px] font-semibold text-olive-deep mb-1.5">Email</label>
+                  <input className={inputCls} style={{ borderColor: errors.email ? '#B45253' : '#E7DFC8' }} value={fields.email} onChange={e => set('email', e.target.value)} placeholder="you@email.com" inputMode="email" type="email" />
+                  {errors.email && <p className="text-rose-clay text-[12px] m-0 mt-1">{errors.email}</p>}
                 </div>
                 <div>
                   <label className="block text-[13px] font-semibold text-olive-deep mb-1.5">Governorate</label>
