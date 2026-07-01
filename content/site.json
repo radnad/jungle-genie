@@ -21,7 +21,7 @@
   },
   "orders": {
     "_comment": "Orders are emailed to the owner automatically through Web3Forms. Paste your free Web3Forms access key below (get one at web3forms.com using junglegenieeg@gmail.com). whatsappNumber is used only for the Contact us link, never for orders.",
-    "web3formsAccessKey": "",
+    "web3formsAccessKey": "87b4b73a-fe77-4558-ae61-d5b4d90a41ba",
     "orderEmail": "junglegenieeg@gmail.com",
     "whatsappNumber": "201099898787",
     "deliveryFeeEGP": 75,
